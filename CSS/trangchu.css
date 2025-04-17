@@ -95,6 +95,7 @@
     background-color: #fff;
     box-shadow: var(--shadow-sm);
     padding: 15px 40px;
+    position: relative;
   }
 
   .logo {
@@ -186,7 +187,7 @@
     top: 0;
     left: 0; /* thêm dòng này */
     right: 0; /* và dòng này */
-    width: 100%;
+    width: 100vw;
     z-index: 999;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
