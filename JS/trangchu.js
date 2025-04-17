@@ -65,3 +65,32 @@ document.addEventListener("DOMContentLoaded", () => {
     new TestimonialSlider();
     new BackToTop();
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+  
+    dropdownToggles.forEach((toggle) => {
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        const parent = this.closest(".dropdown");
+  
+        // Đóng tất cả dropdown khác
+        document.querySelectorAll(".nav-item.dropdown").forEach((item) => {
+          if (item !== parent) item.classList.remove("open");
+        });
+  
+        // Mở dropdown hiện tại
+        parent.classList.toggle("open");
+      });
+    });
+  
+    // Đóng khi click ra ngoài
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".nav-item.dropdown")) {
+        document.querySelectorAll(".nav-item.dropdown").forEach((item) =>
+          item.classList.remove("open")
+        );
+      }
+    });
+  });
+  

@@ -141,27 +141,47 @@ body {
   color: var(--main-color);
 }
 
+.nav-item.dropdown {
+  position: relative;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 110%;
+  top: 100%;
   left: 0;
+  min-width: 200px;
   background-color: #fff;
-  box-shadow: var(--shadow-md);
-  min-width: 180px;
-  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .dropdown-content a {
   display: block;
-  padding: 10px 15px;
-  color: #000;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
   text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-item:hover .dropdown-content {
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--light-bg);
+  color: var(--main-color);
+}
+
+.nav-item.open .dropdown-content {
   display: block;
 }
+
 
 /* Banner */
 .banner {
@@ -175,21 +195,20 @@ body {
 }
 
 .banner img {
-  display: block;
-  width: 624px; /* Kích thước gốc của ảnh */
-  height: 260px; /* Kích thước gốc của ảnh */
-  max-width: none;
+  width: 1200px;
+  height: auto;
+  max-width: 100%;
+  display: inline-block;
 }
-.sadsad
+
 
 .banner-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 35%;
   transform: translate(-50%, -50%); /* căn giữa chữ */
-  color: white;
+  color: #fff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -200,7 +219,7 @@ body {
 }
 
 .banner-text p {
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 30px;
 }
 
@@ -298,7 +317,8 @@ body {
 
 /* About Section */
 .about-section {
-  padding: 40px 20px;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .about-content {
@@ -306,22 +326,60 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 .about-text {
-  flex: 1 1 60%;
+  flex: 1 1 550px;
   text-align: justify;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--dark-text);
 }
 
 .about-image {
-  flex: 1 1 35%;
+  flex: 1 1 400px;
 }
 
 .about-image img {
-  width: 100%;
+  width: 900px;
+  height: auto;
+  max-width: 100%; /* Giúp responsive trên thiết bị nhỏ */
+  display: block;
+  margin: 0 auto; /* Căn giữa nếu cần */
   border-radius: 10px;
   box-shadow: var(--shadow-md);
+  object-fit: contain; /* Giữ nguyên hình dạng ảnh */
 }
+
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột mỗi hàng */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+}
+
+.about-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.zoom-img:hover {
+  transform: scale(1.3); /* hoặc 1.8 nếu 2 quá to */
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  .about-gallery {
+    grid-template-columns: 1fr; /* Mỗi hàng 1 ảnh */
+  }
+}
+
+
 
 /* Doctors Section */
 .doctors-section {
