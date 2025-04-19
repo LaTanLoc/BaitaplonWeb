@@ -315,6 +315,39 @@ body {
   transform: scale(1.05); /* Slight zoom effect on hover */
   transition: transform var(--transition);
 }
+.testimonial-slider {
+  margin-top: 20px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  min-height: 100px;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial {
+  display: none;
+}
+
+.testimonial.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.testimonial .customer-info {
+  margin-top: 8px;
+  font-size: 13px;
+  font-style: normal;
+  color: #666;
+  text-align: right;
+}
+
 /* Appointment Form */
 .appointment-form {
   background-color: var(--light-bg);
@@ -393,31 +426,15 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Call to Action */
-.call-to-action {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: var(--main-color);
-  color: #fff;
-}
-
-.call-to-action h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.call-to-action p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.call-to-action .btn {
-  background-color: #fff;
-  color: var(--main-color);
-}
-
-.call-to-action .btn:hover {
-  background-color: #f0f0f0;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer */
