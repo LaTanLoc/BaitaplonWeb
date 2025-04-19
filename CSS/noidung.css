@@ -293,20 +293,28 @@ body {
   line-height: 1.7;
   margin-bottom: 8px;
 }
-
 .service-image {
   flex: 1;
   min-width: 300px;
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  gap: 20px; /* Space between images */
+  align-items: center; /* Center images horizontally within the column */
 }
 
 .service-image img {
   width: 100%;
-  height: auto;
+  max-width: 300px; /* Control image width */
+  height: 150px; /* Fixed height for uniformity */
   border-radius: 8px;
   box-shadow: var(--shadow-md);
   object-fit: cover;
+  display: block; /* Ensure images behave as block elements */
 }
-
+.service-image img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  transition: transform var(--transition);
+}
 /* Appointment Form */
 .appointment-form {
   background-color: var(--light-bg);
