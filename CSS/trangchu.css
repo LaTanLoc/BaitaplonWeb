@@ -282,8 +282,35 @@
   }
 
   .form-group.submit {
-    flex: 0 0 auto;
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
   }
+  
+  .btn.submit-btn {
+    background-color: var(--main-color, #2db4c8); /* màu chính (có thể tuỳ chỉnh) */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn.submit-btn:hover {
+    background-color: #249eae; /* Màu hover */
+    transform: translateY(-2px);
+  }
+  
+  .btn.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
 
   /* Services Section */
   .dichvu {
@@ -703,3 +730,5 @@
     background-color: #0288d1;
     color: white;
   }
+
+  
