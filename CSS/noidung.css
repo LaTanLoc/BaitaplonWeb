@@ -347,6 +347,42 @@ body {
   color: #666;
   text-align: right;
 }
+.service-summary {
+  background-color: var(--main-color);
+  border: 1px solid #cde4f5;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: var(--shadow-md);
+}
+
+.service-summary .summary-content {
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.service-summary h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.service-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.service-summary li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.service-summary strong {
+  color: #e6f0ff;
+}
 
 /* Appointment Form */
 .appointment-form {
