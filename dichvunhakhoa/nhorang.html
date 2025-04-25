@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nha Khoa Smile - Nhổ Răng</title>
+    <link rel="stylesheet" href="../CSS/noidung.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../JS/trangchu.js"></script>
+</head>
+<body>
+  <!--Top bar-->
+  <div class="top-bar flex-center container">
+    <div class="left">
+        <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
+        <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
+    </div>
+    <div class="right">
+        <span><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</span>
+        <span><i class="fa-solid fa-phone"></i> 0909 987 654</span>
+    </div>
+  </div>
+
+  <!--Navbar-->
+  <nav class="navbar flex-center container">
+    <div class="logo flex-center">
+      <i class="fa-solid fa-tooth"></i>
+      <div class="logo-text">
+          <div class="main-title">Nha Khoa Smile</div>
+          <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+      </div>
+    </div>
+
+    <div class="nav-menu flex-center">
+      <div class="nav-item"><a href="../trangchu.html" class="nav-link">Trang chủ</a></div>
+      <div class="nav-item"><a href="../gioithieu.html" class="nav-link">Giới thiệu</a></div>
+      <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+          <div class="dropdown-content">
+              <a href="bocrangsu.html">Bọc răng sứ</a>
+              <a href="niengrang.html">Niềng răng</a>
+              <a href="dansuveneer.html">Dán sứ Veneer</a>
+              <a href="trongrang.html">Trồng răng Implant</a>
+          </div>
+      </div>
+      <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+          <div class="dropdown-content">
+              <a href="../dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
+              <a href="../dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
+              <a href="../dichvunhakhoa/taytrang.html">Tẩy trắng/lấy cao răng</a>
+              <a href="../dichvunhakhoa/nhorang.html">Nhổ răng</a>
+          </div>
+      </div>
+      <div class="nav-item"><a href="../phanhoikh.html" class="nav-link">Phản hồi KH</a></div>
+      <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+          <div class="dropdown-content">
+              <a href="../bangia_thammy.html">Dịch vụ thẩm mỹ</a>
+              <a href="../bangia_nhakhoa.html">Dịch vụ nha khoa</a>
+          </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a href="../datlich.html" class="nav-link">
+          <button class="btn appointment-btn">Đặt lịch</button>
+      </a>
+    </div>
+  </nav>
+
+ <!-- Banner -->
+ <section class="banner">
+    <img src="../images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
+    <div class="banner-text">
+        <h1>Chào mừng bạn đến với Nha Khoa Smile</h1>
+        <p>Đồng hành cùng bạn với các dịch vụ nha khoa chất lượng cao</p>
+    </div>
+</section>
+
+                   <!-- Appointment Form -->
+                   <section class="appointment-form container">
+                    <h2>Đặt Lịch Hẹn</h2>
+                    <form id="appointment-form">
+                        <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Họ và Tên</label>
+                            <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số Điện Thoại</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Ngày Hẹn</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Giờ hẹn</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Dịch Vụ</label>
+                            <select id="service" name="service" required>
+                            <option value="">Chọn dịch vụ</option>
+                            <optgroup label="Dịch vụ thẩm mỹ">
+                                <option value="boc-rang-su">Bọc răng sứ</option>
+                                <option value="nieng-rang">Niềng răng</option>
+                                <option value="dan-su-veneer">Dán sứ Veneer</option>
+                                <option value="trong-rang-su">Trồng răng Implant</option>
+                            </optgroup>
+                            <optgroup label="Dịch vụ nha khoa">
+                                <option value="han-tram-rang">Hàn/trám răng</option>
+                                <option value="tay-trang">Tẩy trắng răng</option>
+                                <option value="nha-chu">Điều trị nha chu</option>
+                                <option value="nho-rang">Nhổ răng</option>
+                                <option value="lay-cao-rang">Lấy cao răng</option>
+                            </optgroup>
+                            <optgroup label="Khác">
+                                <option value="tuvan">Tư vấn miễn phí</option>
+                            </optgroup>
+                                </select>                       
+                        </div>
+                        <div class="form-group submit">
+                            <button type="submit" class="btn submit-btn">Gửi</button>
+                        </div>
+                    </form>
+                    </section>
+
+  <!--Nội dung-->
+  <section class="service-header container">
+      <h1>Nhổ Răng</h1>
+      <p>Giải pháp nhanh chóng, hiệu quả cho những trường hợp cần phải nhổ răng để cải thiện sức khỏe răng miệng.</p>
+  </section>
+
+  <section class="service-content container">
+      <div class="service-info">
+          <h3>Giới Thiệu Về Nhổ Răng</h3>
+          <p>Nhổ răng là một thủ thuật nha khoa được thực hiện khi răng không thể phục hồi hoặc không còn khả năng giữ lại. Đây là một giải pháp giúp cải thiện tình trạng răng miệng và ngăn ngừa các vấn đề liên quan đến răng miệng như viêm nướu, sâu răng nghiêm trọng hoặc răng mọc lệch.</p>
+          
+          <h3>Quy Trình Nhổ Răng</h3>
+          <ol>
+              <li><strong>Lần hẹn 1 – Khám và tư vấn:</strong>
+                  <ul>
+                      <li>Kiểm tra tình trạng răng miệng tổng quát.</li>
+                      <li>Đánh giá mức độ răng cần nhổ và tư vấn các phương án điều trị phù hợp.</li>
+                  </ul>
+              </li>
+              <li><strong>Lần hẹn 2 – Thực hiện nhổ răng:</strong>
+                  <ul>
+                      <li>Vệ sinh răng miệng và gây tê tại chỗ để giảm đau.</li>
+                      <li>Tiến hành nhổ răng một cách nhẹ nhàng và an toàn.</li>
+                      <li>Hướng dẫn chăm sóc sau khi nhổ răng để tránh viêm nhiễm và nhanh chóng hồi phục.</li>
+                  </ul>
+              </li>
+          </ol>
+
+          <h3>Các Trường Hợp Cần Nhổ Răng</h3>
+          <ul>
+              <li><strong>Sâu răng nghiêm trọng:</strong> Khi răng bị sâu quá mức không thể phục hồi.</li>
+              <li><strong>Răng mọc lệch:</strong> Răng mọc lệch, gây cản trở việc ăn uống và gây đau đớn.</li>
+              <li><strong>Viêm nướu:</strong> Khi răng bị viêm nướu và không thể điều trị bằng phương pháp khác.</li>
+              <li><strong>Răng khôn:</strong> Các trường hợp răng khôn mọc lệch hoặc gây đau đớn cần nhổ.</li>
+          </ul>
+
+          <h3>Cam Kết & Bảo Hành</h3>
+          <ul>
+              <li><strong>Quy trình an toàn:</strong> Sử dụng kỹ thuật hiện đại và gây tê để giảm đau.</li>
+              <li><strong>Chăm sóc tận tình:</strong> Đảm bảo bạn có sự chăm sóc tốt nhất sau khi nhổ răng.</li>
+              <li><strong>Bảo hành:</strong> Cam kết bảo hành dịch vụ để đảm bảo bạn có sự hồi phục tốt nhất.</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content container">
+        <div class="footer-logo">
+            <i class="fa-solid fa-tooth"></i>
+            <span>Nha Khoa Smile</span>
+        </div>
+        <div class="footer-nav">
+            <a href="../trangchu.html">Trang chủ</a>
+            <a href="../gioithieu.html">Giới thiệu</a>
+            <a href="../dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
+            <a href="../dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
+            <a href="../dichvunhakhoa/taytrang.html">Tẩy trắng/lấy cao răng</a>
+            <a href="../dichvunhakhoa/nhorang.html">Nhổ răng</a>
+        </div>
+        <div class="footer-contact">
+            <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</p>
+            <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
+            <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
