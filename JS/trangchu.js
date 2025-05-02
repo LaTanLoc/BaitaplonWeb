@@ -1,4 +1,4 @@
-q  // Chuyển động của phản hồi khách hàng 
+ // Chuyển động của phản hồi khách hàng 
   class TestimonialSlider {
     constructor(selector, interval = 4000) {
       this.testimonials = document.querySelectorAll(selector);
