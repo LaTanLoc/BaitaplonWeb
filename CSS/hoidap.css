@@ -1,0 +1,240 @@
+.qna-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.qna-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #1c2526;
+}
+
+.qna-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #65676b;
+}
+
+.qna-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qna-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1c2526;
+}
+
+.qna-form .form-group {
+    margin-bottom: 15px;
+}
+
+.qna-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.qna-form input,
+.qna-form select,
+.qna-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.qna-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.qna-form .submit-btn {
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.qna-form .submit-btn:hover {
+    background: #2980b9;
+}
+
+.qna-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.qna-list h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1c2526;
+}
+
+.qna-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.qna-item .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #e4e6eb;
+}
+
+.qna-item .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.qna-item .content {
+    flex: 1;
+    background: #f0f2f5;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.qna-item .content .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.qna-item .content .user-info .name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1c2526;
+    margin-right: 5px;
+}
+
+.qna-item .content .user-info .service {
+    font-size: 0.9rem;
+    color: #65676b;
+}
+
+.qna-item .content .question {
+    font-size: 1rem;
+    color: #1c2526;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.qna-item .content .meta {
+    font-size: 0.85rem;
+    color: #65676b;
+}
+
+.qna-item .reply-form {
+    margin-left: 50px;
+    margin-top: 10px;
+    display: none;
+}
+
+.qna-item .reply-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.qna-item .reply-form .reply-btn {
+    background: #42b72a;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.qna-item .reply-form .reply-btn:hover {
+    background: #36a420;
+}
+
+.qna-item .answer {
+    margin-left: 50px;
+    margin-top: 10px;
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: #1c2526;
+    line-height: 1.4;
+    border: 1px solid #e4e6eb;
+}
+
+.qna-item .answer .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.qna-item .answer .user-info .name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1c2526;
+    margin-right: 5px;
+}
+
+.qna-item .answer .user-info .role {
+    font-size: 0.9rem;
+    color: #65676b;
+}
+.qna-item .name.role-user {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.qna-item .name.role-admin {
+    color: #2980b9;
+    font-weight: 700;
+}.qna-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.qna-question {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1c2526;
+}
+
+.qna-answer {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.reply-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
