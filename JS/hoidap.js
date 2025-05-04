@@ -1,138 +1,113 @@
 document.addEventListener("DOMContentLoaded", function () {
     const qnaForm = document.getElementById("qna-form");
     const qnaList = document.getElementById("qna-list");
+    const pagination = document.getElementById("pagination");
+    const clearDataBtn = document.getElementById("clear-data-btn");
 
-    let questions = JSON.parse(localStorage.getItem("qnaData")) || [];
+    // Load existing questions from localStorage or initialize empty array
+    let faqs = JSON.parse(localStorage.getItem("faqs")) || [];
+    let currentPage = 1;
+    const itemsPerPage = 5;
 
-    renderAllQuestions();
+    // Save FAQs to localStorage
+    function saveFaqs() {
+        localStorage.setItem("faqs", JSON.stringify(faqs));
+    }
 
-    qnaForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    // Clear all FAQs from localStorage
+    function clearFaqs() {
+        faqs = [];
+        localStorage.removeItem("faqs");
+        currentPage = 1;
+        renderFaqs();
+    }
 
-        const name = document.getElementById("qna-name").value.trim();
-        const service = document.getElementById("qna-service").value;
-        const questionText = document.getElementById("qna-question").value.trim();
-
-        if (!name || !service || !questionText) {
-            alert("Vui lòng điền đầy đủ thông tin.");
-            return;
+    // Add event listener for clear data button with password prompt
+    clearDataBtn.addEventListener("click", function () {
+        const password = prompt("Nhập mật khẩu để xóa dữ liệu:");
+        if (password === "123456") {
+            if (confirm("Bạn có chắc chắn muốn xóa toàn bộ dữ liệu?")) {
+                clearFaqs();
+            }
+        } else {
+            alert("Mật khẩu không đúng!");
         }
-
-        const timestamp = Date.now();
-        const newQuestion = {
-            id: timestamp,
-            name,
-            service,
-            question: questionText,
-            answer: "",
-            timestamp,
-            answered: false
-        };
-
-        questions.push(newQuestion);
-        localStorage.setItem("qnaData", JSON.stringify(questions));
-        displayQuestion(newQuestion);
-
-        qnaForm.reset();
     });
 
-    function renderAllQuestions() {
-        qnaList.innerHTML = "";
-        questions.forEach(displayQuestion);
+    // Render FAQs for the current page
+    function renderFaqs() {
+        qnaList.innerHTML = "<h3>Các Câu Hỏi và Trả Lời</h3>";
+        clearDataBtn.textContent = `Xóa Dữ Liệu (${faqs.length}/50)`; // ✅ cập nhật số câu
+        qnaList.appendChild(clearDataBtn);
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedFaqs = faqs.slice(startIndex, endIndex); // Reverse to show newest first
+
+        paginatedFaqs.forEach((faq, index) => {
+            const div = document.createElement("div");
+            div.className = "qna-item";
+
+            const q = document.createElement("div");
+            q.className = "question";
+            q.textContent = `${faq.name}: ${faq.question}`;
+            div.appendChild(q);
+
+            const a = document.createElement("div");
+            a.className = "answer";
+            a.textContent = faq.answer ? `Trả lời: ${faq.answer}` : "Chưa có trả lời";
+            div.appendChild(a);
+
+            if (!faq.answer) {
+                const btn = document.createElement("button");
+                btn.textContent = "Trả lời";
+                btn.onclick = () => {
+                    const password = prompt("Nhập mật khẩu để trả lời:");
+                    if (password === "123456") {
+                        const answer = prompt("Nhập câu trả lời:");
+                        if (answer) {
+                            faq.answer = answer;
+                            saveFaqs();
+                            renderFaqs();
+                        }
+                    } else {
+                        alert("Mật khẩu không đúng!");
+                    }
+                };
+                div.appendChild(btn);
+            }
+
+            qnaList.appendChild(div);
+        });
+
+        // Render pagination controls
+        renderPagination();
     }
 
-    function displayQuestion(q) {
-        const qnaItem = document.createElement("div");
-        qnaItem.classList.add("qna-item");
-        qnaItem.setAttribute("data-id", q.id);
-
-        const serviceText = mapServiceToText(q.service);
-        const relativeTime = getRelativeTime(q.timestamp);
-
-        qnaItem.innerHTML = `
-            <div class="content">
-                <span class="meta">${relativeTime}</span>
-                <span class="name">${q.name}</span>
-                <div class="question">${q.question} (${serviceText})</div>
-            </div>
-        `;
-
-        if (!q.answered) {
-            const replyLink = document.createElement("a");
-            replyLink.classList.add("reply-link");
-            replyLink.textContent = "Trả lời";
-            replyLink.href = "#";
-
-            const replyForm = document.createElement("div");
-            replyForm.classList.add("reply-form");
-            replyForm.style.display = "none";
-            replyForm.innerHTML = `
-                <textarea placeholder="Nhập câu trả lời..."></textarea>
-                <button class="reply-btn">Trả lời</button>
-            `;
-
-            replyLink.addEventListener("click", function (e) {
-                e.preventDefault();
-                replyForm.style.display = replyForm.style.display === "block" ? "none" : "block";
-            });
-
-            replyForm.querySelector(".reply-btn").addEventListener("click", function () {
-                const answerText = replyForm.querySelector("textarea").value.trim();
-                if (!answerText) {
-                    alert("Vui lòng nhập nội dung trả lời.");
-                    return;
-                }
-
-                q.answer = answerText;
-                q.answered = true;
-
-                localStorage.setItem("qnaData", JSON.stringify(questions));
-                renderAllQuestions();
-            });
-
-            qnaItem.appendChild(replyLink);
-            qnaItem.appendChild(replyForm);
-        } else {
-            displayAnswer(qnaItem, q);
+    // Handle form submission
+    qnaForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+    
+        const name = document.getElementById("qna-name").value.trim();
+        const question = document.getElementById("qna-question").value.trim();
+    
+        if (name && question) {
+            faqs.unshift({ name, question, answer: "" }); // Thêm ở đầu mảng
+    
+            // 🔥 Giới hạn tối đa 50 câu
+            if (faqs.length > 50) {
+                faqs = faqs.slice(0, 50); // Cắt chỉ giữ lại 50 câu mới nhất
+            }
+    
+            saveFaqs();
+            const totalPages = Math.ceil(faqs.length / itemsPerPage);
+            if (faqs.length % itemsPerPage === 1 && currentPage === totalPages - 1) {
+                currentPage = totalPages;
+            }
+            renderFaqs();
+            qnaForm.reset();
         }
+    });    
 
-        qnaList.appendChild(qnaItem);
-    }
-
-    function displayAnswer(container, q) {
-        const answerDiv = document.createElement("div");
-        answerDiv.classList.add("answer");
-        answerDiv.innerHTML = `
-            <span class="name">Nha Khoa Smile</span>
-            <div class="text">${q.answer}</div>
-        `;
-        container.appendChild(answerDiv);
-    }
-
-    function mapServiceToText(serviceKey) {
-        const serviceMap = {
-            "boc-rang-su": "Bọc răng sứ",
-            "nieng-rang": "Niềng răng",
-            "dan-su-veneer": "Dán sứ Veneer",
-            "trong-rang-su": "Trồng răng Implant",
-            "han-tram-rang": "Hàn/trám răng",
-            "tay-trang": "Tẩy trắng răng",
-            "nha-chu": "Điều trị nha chu",
-            "nho-rang": "Nhổ răng",
-            "lay-cao-rang": "Lấy cao răng",
-            "tuvan": "Tư vấn miễn phí"
-        };
-        return serviceMap[serviceKey] || "Không xác định";
-    }
-
-    function getRelativeTime(timestamp) {
-        const now = Date.now();
-        const diffInMinutes = Math.floor((now - timestamp) / (1000 * 60));
-        if (diffInMinutes < 1) return "Vừa xong";
-        if (diffInMinutes < 60) return `${diffInMinutes} phút trước`;
-        const diffInHours = Math.floor(diffInMinutes / 60);
-        if (diffInHours < 24) return `${diffInHours} giờ trước`;
-        const diffInDays = Math.floor(diffInHours / 24);
-        return `${diffInDays} ngày trước`;
-    }
+    // Initial render
+    renderFaqs();
 });
