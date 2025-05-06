@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load existing questions from localStorage or initialize empty array
     let faqs = JSON.parse(localStorage.getItem("faqs")) || [];
     let currentPage = 1;
-    const itemsPerPage = 5;
+    const itemsPerPage = 50;
 
     // Save FAQs to localStorage
     function saveFaqs() {
@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
             renderFaqs();
             qnaForm.reset();
         }
+        form.reset();
     });    
 
     // Initial render
