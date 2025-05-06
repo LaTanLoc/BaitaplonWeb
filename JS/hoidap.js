@@ -33,7 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Mật khẩu không đúng!");
         }
     });
-
+    if (name && question) {
+        faqs.unshift({ name, question, answer: "" }); // Thêm ở đầu mảng
+    
+        if (faqs.length > 50) {
+            faqs = faqs.slice(0, 50); // Giới hạn 50 câu
+        }
+    
+        saveFaqs();
+        qnaForm.reset(); // ✅ Clear form ngay sau khi lưu
+        currentPage = 1; // ✅ Quay về trang đầu để xem câu mới nhất
+        renderFaqs();
+    }
+    
     // Render FAQs for the current page
     function renderFaqs() {
         qnaList.innerHTML = "<h3>Các Câu Hỏi và Trả Lời</h3>";
