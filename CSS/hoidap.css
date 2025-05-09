@@ -1,3 +1,4 @@
+/* Q&A Section */
 .qna-section {
     padding: 40px 0;
     text-align: center;
@@ -46,22 +47,14 @@
 .qna-form input,
 .qna-form select,
 .qna-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
     box-sizing: border-box;
 }
 
 .qna-form .submit-btn {
     background: #3498db;
     color: #fff;
-    padding: 10px 20px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
     transition: background 0.3s;
 }
 
@@ -102,11 +95,7 @@
     margin-top: 10px;
     background: #42b72a;
     color: #fff;
-    padding: 5px 10px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
     transition: background 0.3s;
 }
 
@@ -122,11 +111,7 @@
 .pagination button {
     background: #3498db;
     color: #fff;
-    padding: 5px 10px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
     margin: 0 5px;
     transition: background 0.3s;
 }
@@ -143,11 +128,7 @@
 .clear-btn {
     background: #e74c3c;
     color: #fff;
-    padding: 5px 10px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
     margin-bottom: 10px;
     transition: background 0.3s;
 }
