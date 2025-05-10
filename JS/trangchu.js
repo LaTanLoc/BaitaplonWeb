@@ -106,24 +106,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      const parent = this.closest(".dropdown");
-      document.querySelectorAll(".nav-item.dropdown").forEach(item => {
-        if (item !== parent) item.classList.remove("open");
-      });
-      parent.classList.toggle("open");
-    });
-  });
+  const dropdowns = document.querySelectorAll(".nav-item.dropdown");
 
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest(".nav-item.dropdown")) {
-      document.querySelectorAll(".nav-item.dropdown").forEach(item =>
-        item.classList.remove("open")
-      );
-    }
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener("mouseenter", function () {
+      // Đóng các dropdown khác
+      dropdowns.forEach(item => {
+        if (item !== this) item.classList.remove("open");
+      });
+      this.classList.add("open");
+    });
+
+    dropdown.addEventListener("mouseleave", function () {
+      this.classList.remove("open");
+    });
   });
 });
 
@@ -132,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      alert("Đặt lịch hẹn thành công! Chúng tôi sẽ liên lạc để xác nhận trong 24h.");
+      alert("Đặt lịch hẹn thành công! Chúng tôi sẽ liên lạc để xác nhận trong 24h.\nCảm ơn bạn đã tin tưởng và lựa chọn dịch vụ của chúng tôi.");
       form.reset();
     });
   }
