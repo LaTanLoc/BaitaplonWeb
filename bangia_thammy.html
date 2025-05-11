@@ -10,9 +10,18 @@
     <script src="JS/trangchu.js"></script>
 </head>
 <body>
- <!-- Top bar -->
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Top bar -->
     <div class="top-bar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="left">
                 <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
                 <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
@@ -26,7 +35,7 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="logo flex-center">
                 <i class="fa-solid fa-tooth"></i>
                 <div class="logo-text">
@@ -38,7 +47,7 @@
                 <div class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></div>
                 <div class="nav-item"><a href="gioithieu.html" class="nav-link">Giới thiệu</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
                     <div class="dropdown-content">
                         <a href="dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
                         <a href="dichvuthammy/niengrang.html">Niềng răng</a>
@@ -48,7 +57,7 @@
                 </div>
                 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
                     <div class="dropdown-content">
                         <a href="dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
                         <a href="dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
@@ -58,7 +67,7 @@
                 </div>
                 <div class="nav-item"><a href="hoidap.html" class="nav-link">Hỏi đáp</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
                     <div class="dropdown-content">
                         <a href="bangia_thammy.html">Dịch vụ thẩm mỹ</a>
                         <a href="bangia_nhakhoa.html">Dịch vụ nha khoa</a>
@@ -72,8 +81,9 @@
             </div>
         </div>
     </nav>
+
     <!-- Banner -->
-    <section class="banner">
+    <section class="banner reveal">
         <img src="images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
         <div class="banner-text">
             <h1>Bảng Giá Dịch Vụ Thẩm Mỹ</h1>
@@ -82,13 +92,13 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section container">
-        <div class="pricing-intro">
+    <section class="pricing-section container reveal">
+        <div class="pricing-intro reveal">
             <h2 class="section-title">Dịch Vụ Thẩm Mỹ Chuyên Nghiệp</h2>
             <p>Tại Nha Khoa Smile, chúng tôi cung cấp các dịch vụ thẩm mỹ nha khoa tiên tiến, giúp bạn sở hữu nụ cười tự tin với chi phí minh bạch và hợp lý. Hãy khám phá bảng giá dưới đây!</p>
         </div>
         <hr class="section-divider">
-        <div class="pricing-category">
+        <div class="pricing-category reveal">
             <table class="pricing-table">
                 <thead>
                     <tr>
@@ -121,15 +131,15 @@
                 </tbody>
             </table>
         </div>
-        <div class="pricing-cta">
+        <div class="pricing-cta reveal">
             <a href="datlich.html" class="btn cta-btn">Đặt Lịch Ngay</a>
         </div>
     </section>
 
     <!-- Service Highlights -->
-    <section class="service-highlights container">
+    <section class="service-highlights container reveal">
         <h2 class="section-title">Dịch Vụ Thẩm Mỹ Nổi Bật</h2>
-        <div class="dichvu-grid">
+        <div class="dichvu-grid reveal">
             <a style="text-decoration: none;" href="dichvuthammy/bocrangsu.html" class="dichvu-item">
                 <img src="images/service1.jpg" alt="Bọc Răng Sứ">
                 <div class="dichvu-caption">Bọc Răng Sứ</div>
@@ -150,10 +160,10 @@
     </section>
 
     <!-- Testimonial Section -->
-    <section class="testimonial-section">
+    <section class="testimonial-section reveal">
         <div class="container">
             <h2 class="section-title">Khách Hàng Nói Gì</h2>
-            <div class="testimonial-slider">
+            <div class="testimonial-slider reveal">
                 <div class="testimonial active">
                     <p class="feedback">"Bọc răng sứ tại Nha Khoa Smile đã giúp tôi tự tin hơn rất nhiều. Quy trình chuyên nghiệp và đội ngũ bác sĩ tận tâm!"</p>
                     <h4>Nguyễn Minh Anh</h4>
@@ -174,7 +184,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="footer-container container">
             <div class="footer-box">
                 <div class="logo flex-center">
@@ -210,7 +220,7 @@
         <div class="footer-bottom">
             <p>© Nha Khoa Smile. All Rights Reserved.</p>
             <p>Thiết kế bởi Nhóm 13</p>
-            <a href="#" class="scroll-top">Lên đầu trang</a>
+            <a href="javascript:void(0)" class="scroll-top">Lên đầu trang</a>
         </div>
     </footer>
 

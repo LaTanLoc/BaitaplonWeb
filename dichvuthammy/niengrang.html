@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nha Khoa Smile - Niềng răng</title>
+    <title>Nha Khoa Smile - Niềng Răng</title>
     <link rel="stylesheet" href="../CSS/trangchu.css">
     <link rel="stylesheet" href="../CSS/noidung.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="../JS/trangchu.js"></script>
 </head>
 <body>
-   <!-- Top bar -->
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Top bar -->
     <div class="top-bar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="left">
                 <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
                 <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
@@ -26,7 +35,7 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="logo flex-center">
                 <i class="fa-solid fa-tooth"></i>
                 <div class="logo-text">
@@ -37,8 +46,8 @@
             <div class="nav-menu flex-center">
                 <div class="nav-item"><a href="../index.html" class="nav-link">Trang chủ</a></div>
                 <div class="nav-item"><a href="../gioithieu.html" class="nav-link">Giới thiệu</a></div>
-                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
                     <div class="dropdown-content">
                         <a href="bocrangsu.html">Bọc răng sứ</a>
                         <a href="niengrang.html">Niềng răng</a>
@@ -47,7 +56,7 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
                     <div class="dropdown-content">
                         <a href="../dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
                         <a href="../dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
@@ -57,7 +66,7 @@
                 </div>
                 <div class="nav-item"><a href="../hoidap.html" class="nav-link">Hỏi đáp</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
                     <div class="dropdown-content">
                         <a href="../bangia_thammy.html">Dịch vụ thẩm mỹ</a>
                         <a href="../bangia_nhakhoa.html">Dịch vụ nha khoa</a>
@@ -72,196 +81,186 @@
         </div>
     </nav>
 
-
-  <!-- Banner -->
- <section class="banner">
-  <img src="../images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
-  <div class="banner-text">
-      <h1>Chào mừng bạn đến với Nha Khoa Smile</h1>
-      <p>Đồng hành cùng bạn với các dịch vụ nha khoa chất lượng cao</p>
-  </div>
-  </section>
-
-  <!-- Appointment Form -->
-  <section class="appointment-form container">
-    <h2>Đặt Lịch Hẹn</h2>
-    <form id="appointment-form">
-        <div class="form-row">
-        <div class="form-group">
-            <label for="name">Họ và Tên</label>
-            <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+    <!-- Banner -->
+    <section class="banner reveal">
+        <img src="../images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
+        <div class="banner-text">
+            <h1>Chào mừng bạn đến với Nha Khoa Smile</h1>
+            <p>Đồng hành cùng bạn với các dịch vụ nha khoa chất lượng cao</p>
         </div>
-        <div class="form-group">
-            <label for="phone">Số Điện Thoại</label>
-            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Nhập email" required>
-        </div>
-        <div class="form-group">
-            <label for="date">Ngày Hẹn</label>
-            <input type="date" id="date" name="date" required>
-        </div>
-        <div class="form-group">
-            <label for="time">Giờ hẹn</label>
-            <input type="time" id="time" name="time" required>
-        </div>
-        </div>
-        <div class="form-group">
-            <label for="service">Dịch Vụ</label>
-            <select id="service" name="service" required>
-            <option value="">Chọn dịch vụ</option>
-            <optgroup label="Dịch vụ thẩm mỹ">
-                <option value="boc-rang-su">Bọc răng sứ</option>
-                <option value="dan-su-veneer">Dán sứ Veneer</option>
-                <option value="nieng-rang">Niềng răng</option>
-                <option value="trong-rang-su">Trồng răng Implant</option>
-            </optgroup>
-            <optgroup label="Dịch vụ nha khoa">
-                <option value="han-tram-rang">Hàn/trám răng</option>
-                <option value="tay-trang">Tẩy trắng răng</option>
-                <option value="nha-chu">Điều trị nha chu</option>
-                <option value="nho-rang">Nhổ răng</option>
-                <option value="lay-cao-rang">Lấy cao răng</option>
-            </optgroup>
-            <optgroup label="Khác">
-                <option value="tuvan">Tư vấn miễn phí</option>
-            </optgroup>
-                </select>                       
-        </div>
-        <div class="form-group submit">
-            <button type="submit" class="btn submit-btn">Gửi</button>
-        </div>
-    </form>
     </section>
 
-  <!--Nội dung-->
-  <section class="service-header container">
-      <h1>Niềng Răng</h1>
-      <p>Phương pháp chỉnh nha hiện đại giúp răng đều đẹp, cải thiện khớp cắn và tăng tính thẩm mỹ cho nụ cười.</p>
-  </section>
+    <!-- Appointment Form -->
+    <section class="appointment-form container reveal">
+        <h2>Đặt Lịch Hẹn</h2>
+        <form id="appointment-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Ngày Hẹn</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Giờ hẹn</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Dịch Vụ</label>
+                <select id="service" name="service" required>
+                    <option value="">Chọn dịch vụ</option>
+                    <optgroup label="Dịch vụ thẩm mỹ">
+                        <option value="boc-rang-su">Bọc răng sứ</option>
+                        <option value="dan-su-veneer">Dán sứ Veneer</option>
+                        <option value="nieng-rang">Niềng răng</option>
+                        <option value="trong-rang-su">Trồng răng Implant</option>
+                    </optgroup>
+                    <optgroup label="Dịch vụ nha khoa">
+                        <option value="han-tram-rang">Hàn/trám răng</option>
+                        <option value="tay-trang">Tẩy trắng răng</option>
+                        <option value="nha-chu">Điều trị nha chu</option>
+                        <option value="nho-rang">Nhổ răng</option>
+                        <option value="lay-cao-rang">Lấy cao răng</option>
+                    </optgroup>
+                    <optgroup label="Khác">
+                        <option value="tuvan">Tư vấn miễn phí</option>
+                    </optgroup>
+                </select>                       
+            </div>
+            <div class="form-group submit">
+                <button type="submit" class="btn submit-btn">Gửi</button>
+            </div>
+        </form>
+    </section>
 
-  <section class="service-content container">
-      <div class="service-info">
-        <section class="service-content container">
-          <div class="service-info">
+    <!-- Nội dung -->
+    <section class="service-header container reveal">
+        <h1>Niềng Răng</h1>
+        <p>Phương pháp chỉnh nha hiện đại giúp răng đều đẹp, cải thiện khớp cắn và tăng tính thẩm mỹ cho nụ cười.</p>
+    </section>
+
+    <section class="service-content container reveal">
+        <div class="service-info reveal">
             <h3>Giới Thiệu Về Niềng Răng</h3>
             <p>Niềng răng là một hành trình cải thiện nụ cười bằng cách sử dụng các khí cụ chỉnh nha để đưa răng về vị trí đúng trên cung hàm. Phương pháp này giúp khắc phục tình trạng răng lệch, hô, móm hay chen chúc, từ đó nâng cao cả tính thẩm mỹ lẫn chức năng ăn nhai.</p>
             <ul>
-              <li><strong>Hiệu quả vượt trội:</strong> Giúp răng đều đặn, khuôn mặt hài hòa và nụ cười rạng rỡ tự nhiên.</li>
-              <li><strong>Không gây tổn hại răng thật:</strong> Niềng răng không xâm lấn, bảo tồn tối đa mô răng gốc.</li>
-              <li><strong>Phù hợp với mọi nhu cầu:</strong> Tùy theo điều kiện và mong muốn, bạn có thể chọn mắc cài kim loại, mắc cài sứ thẩm mỹ hoặc niềng răng trong suốt.</li>
-              <li><strong>Hiệu quả lâu dài:</strong> Với sự tuân thủ đúng quy trình, kết quả sẽ được duy trì ổn định nhiều năm sau điều trị.</li>
+                <li><strong>Hiệu quả vượt trội:</strong> Giúp răng đều đặn, khuôn mặt hài hòa và nụ cười rạng rỡ tự nhiên.</li>
+                <li><strong>Không gây tổn hại răng thật:</strong> Niềng răng không xâm lấn, bảo tồn tối đa mô răng gốc.</li>
+                <li><strong>Phù hợp với mọi nhu cầu:</strong> Tùy theo điều kiện và mong muốn, bạn có thể chọn mắc cài kim loại, mắc cài sứ thẩm mỹ hoặc niềng răng trong suốt.</li>
+                <li><strong>Hiệu quả lâu dài:</strong> Với sự tuân thủ đúng quy trình, kết quả sẽ được duy trì ổn định nhiều năm sau điều trị.</li>
             </ul>
-        
+
             <h3>Quy Trình Niềng Răng Tại Smile</h3>
             <ol>
-              <li><strong>Thăm khám & tư vấn chi tiết:</strong> Bác sĩ sẽ chụp phim X-quang, phân tích khớp cắn và lên phác đồ điều trị cá nhân hóa, phù hợp nhất với tình trạng của bạn.</li>
-              <li><strong>Gắn khí cụ chỉnh nha:</strong> Tùy vào phương pháp lựa chọn, bác sĩ sẽ tiến hành gắn mắc cài hoặc thiết kế khay niềng trong suốt riêng biệt cho bạn.</li>
-              <li><strong>Tái khám định kỳ:</strong> Theo dõi sát sao sự dịch chuyển răng, điều chỉnh lực kéo để đảm bảo tiến độ điều trị diễn ra tối ưu nhất.</li>
-              <li><strong>Kết thúc điều trị & duy trì:</strong> Sau khi tháo niềng, bạn sẽ được đeo hàm duy trì để giữ răng ổn định và không bị xô lệch trở lại.</li>
+                <li><strong>Thăm khám & tư vấn chi tiết:</strong> Bác sĩ sẽ chụp phim X-quang, phân tích khớp cắn và lên phác đồ điều trị cá nhân hóa, phù hợp nhất với tình trạng của bạn.</li>
+                <li><strong>Gắn khí cụ chỉnh nha:</strong> Tùy vào phương pháp lựa chọn, bác sĩ sẽ tiến hành gắn mắc cài hoặc thiết kế khay niềng trong suốt riêng biệt cho bạn.</li>
+                <li><strong>Tái khám định kỳ:</strong> Theo dõi sát sao sự dịch chuyển răng, điều chỉnh lực kéo để đảm bảo tiến độ điều trị diễn ra tối ưu nhất.</li>
+                <li><strong>Kết thúc điều trị & duy trì:</strong> Sau khi tháo niềng, bạn sẽ được đeo hàm duy trì để giữ răng ổn định và không bị xô lệch trở lại.</li>
             </ol>
-        
+
             <h3>Các Phương Pháp Niềng Răng Phổ Biến</h3>
             <ul>
-              <li><strong>Mắc cài kim loại:</strong> Lựa chọn truyền thống, chi phí tiết kiệm nhưng vẫn mang lại hiệu quả cao.</li>
-              <li><strong>Mắc cài sứ:</strong> Có màu gần giống răng thật, thích hợp cho người cần sự thẩm mỹ trong quá trình điều trị.</li>
-              <li><strong>Niềng răng trong suốt (Invisalign):</strong> Hiện đại, tiện lợi và gần như vô hình. Bạn có thể tháo lắp khi ăn uống hay vệ sinh.</li>
+                <li><strong>Mắc cài kim loại:</strong> Lựa chọn truyền thống, chi phí tiết kiệm nhưng vẫn mang lại hiệu quả cao.</li>
+                <li><strong>Mắc cài sứ:</strong> Có màu gần giống răng thật, thích hợp cho người cần sự thẩm mỹ trong quá trình điều trị.</li>
+                <li><strong>Niềng răng trong suốt (Invisalign):</strong> Hiện đại, tiện lợi và gần như vô hình. Bạn có thể tháo lắp khi ăn uống hay vệ sinh.</li>
             </ul>
-        
+
             <h3>Cam Kết & Chính Sách Bảo Hành Tại Smile</h3>
             <ul>
-              <li><strong>Trang thiết bị hiện đại:</strong> Áp dụng công nghệ phân tích 3D, hỗ trợ lên kế hoạch điều trị chính xác và hiệu quả.</li>
-              <li><strong>Đội ngũ bác sĩ chuyên môn cao:</strong> Được đào tạo chuyên sâu về chỉnh nha, tận tâm theo sát từng ca điều trị.</li>
-              <li><strong>Chi phí minh bạch & linh hoạt:</strong> Mức giá hợp lý, có hỗ trợ trả góp 0% lãi suất giúp khách hàng an tâm hơn khi điều trị dài hạn.</li>
-              <li><strong>Bảo hành rõ ràng:</strong> Chính sách bảo hành theo từng giai đoạn, đảm bảo kết quả cuối cùng đạt chuẩn và duy trì lâu dài.</li>
+                <li><strong>Trang thiết bị hiện đại:</strong> Áp dụng công nghệ phân tích 3D, hỗ trợ lên kế hoạch điều trị chính xác và hiệu quả.</li>
+                <li><strong>Đội ngũ bác sĩ chuyên môn cao:</strong> Được đào tạo chuyên sâu về chỉnh nha, tận tâm theo sát từng ca điều trị.</li>
+                <li><strong>Chi phí minh bạch & linh hoạt:</strong> Mức giá hợp lý, có hỗ trợ trả góp 0% lãi suất giúp khách hàng an tâm hơn khi điều trị dài hạn.</li>
+                <li><strong>Bảo hành rõ ràng:</strong> Chính sách bảo hành theo từng giai đoạn, đảm bảo kết quả cuối cùng đạt chuẩn và duy trì lâu dài.</li>
             </ul>
-          </div>
-        </section>
-        
-      </div>
-
-      <div class="service-image">
-          <img src="../images/niengrang1.jpg" alt="Niềng Răng 1">
-          <img src="../images/niengrang2.jpg" alt="Niềng Răng 2">
-          <img src="../images/niengrang3.jpg" alt="Niềng Răng 3">
-          <img src="../images/niengrang.jpg" alt="Niềng Răng 4">
-
-          <div class="testimonial-slider">
-              <div class="testimonial active">
-                  <p class="feedback">"Sau khi niềng xong, mình thấy tự tin hơn nhiều khi giao tiếp!"</p>
-                  <p class="customer-info">– Minh Anh, tháng 3/2025</p>
-              </div>
-              <div class="testimonial">
-                  <p class="feedback">"Bác sĩ rất nhiệt tình, dịch vụ chuyên nghiệp và tận tâm."</p>
-                  <p class="customer-info">– Thúy Hằng, tháng 2/2025</p>
-              </div>
-              <div class="testimonial">
-                  <p class="feedback">"Niềng răng không đau như mình tưởng, mà kết quả lại rất tuyệt vời."</p>
-                  <p class="customer-info">– Anh Phúc, tháng 1/2025</p>
-              </div>
-          </div>
-
-          <section class="service-summary container">
-              <div class="summary-content">
-                  <h3>Tóm Tắt Dịch Vụ</h3>
-                  <ul>
-                      <li><strong>Tên dịch vụ:</strong> Niềng Răng</li>
-                      <li><strong>Mô tả:</strong> Sử dụng khí cụ chỉnh nha để điều chỉnh răng lệch, chen chúc hoặc sai khớp cắn.</li>
-                      <li><strong>Chỉ định:</strong> Răng hô, móm, chen chúc, khớp cắn lệch.</li>
-                      <li><strong>Thời gian:</strong> Từ 12 – 24 tháng tùy mức độ.</li>
-                      <li><strong>Chi phí:</strong> 20,000,000 – 60,000,000 VNĐ</li>
-                  </ul>
-              </div>
-          </section>
-      </div>
-  </section>
-
-  <!--Footer-->
-  <footer class="footer">
-    <div class="footer-container container">
-      <div class="footer-box">
-        <div class="logo flex-center">
-          <i class="fa-solid fa-tooth"></i>
-          <div class="logo-text">
-            <div class="main-title">Nha Khoa Smile</div>
-            <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
-          </div>
         </div>
-      </div>
 
-      <div class="footer-box">
-        <h3>Thông Tin Liên Hệ</h3>
-        <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
-        <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
-        <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
-      </div>
+        <div class="service-image reveal">
+            <img src="../images/niengrang1.jpg" alt="Niềng Răng 1">
+            <img src="../images/niengrang2.jpg" alt="Niềng Răng 2">
+            <img src="../images/niengrang3.jpg" alt="Niềng Răng 3">
+            <img src="../images/niengrang.jpg" alt="Niềng Răng 4">
 
-      <div class="footer-box">
-        <h3>Nha Khoa Smile</h3>
-        <a href="gioithieu.html">Giới thiệu</a>
-        <a href="#">Miễn trừ trách nhiệm</a>
-        <a href="#">Chính sách bảo hành</a>
-        <a href="#">Chính sách bảo mật & quyền riêng tư</a>
-      </div>
+            <div class="testimonial-slider reveal">
+                <div class="testimonial active">
+                    <p class="feedback">"Sau khi niềng xong, mình thấy tự tin hơn nhiều khi giao tiếp!"</p>
+                    <p class="customer-info">– Minh Anh, tháng 3/2025</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Bác sĩ rất nhiệt tình, dịch vụ chuyên nghiệp và tận tâm."</p>
+                    <p class="customer-info">– Thúy Hằng, tháng 2/2025</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Niềng răng không đau như mình tưởng, mà kết quả lại rất tuyệt vời."</p>
+                    <p class="customer-info">– Anh Phúc, tháng 1/2025</p>
+                </div>
+            </div>
 
-      <div class="footer-box social">
-        <h3>Kết Nối Với Chúng Tôi</h3>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
+            <section class="service-summary container reveal">
+                <div class="summary-content">
+                    <h3>Tóm Tắt Dịch Vụ</h3>
+                    <ul>
+                        <li><strong>Tên dịch vụ:</strong> Niềng Răng</li>
+                        <li><strong>Mô tả:</strong> Sử dụng khí cụ chỉnh nha để điều chỉnh răng lệch, chen chúc hoặc sai khớp cắn.</li>
+                        <li><strong>Chỉ định:</strong> Răng hô, móm, chen chúc, khớp cắn lệch.</li>
+                        <li><strong>Thời gian:</strong> Từ 12 – 24 tháng tùy mức độ.</li>
+                        <li><strong>Chi phí:</strong> 20,000,000 – 60,000,000 VNĐ</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
 
-    <div class="footer-bottom">
-      <p>© Nha Khoa Smile. All Rights Reserved.</p>
-      <p>Thiết kế bởi Nhóm 13</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer reveal">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <div class="logo flex-center">
+                    <i class="fa-solid fa-tooth"></i>
+                    <div class="logo-text">
+                        <div class="main-title">Nha Khoa Smile</div>
+                        <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
+                <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
+                <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
+            </div>
+            <div class="footer-box">
+                <h3>Nha Khoa Smile</h3>
+                <a href="../gioithieu.html">Giới thiệu</a>
+                <a href="#">Miễn trừ trách nhiệm</a>
+                <a href="#">Chính sách bảo hành</a>
+                <a href="#">Chính sách bảo mật & quyền riêng tư</a>
+            </div>
+            <div class="footer-box social">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Nha Khoa Smile. All Rights Reserved.</p>
+            <p>Thiết kế bởi Nhóm 13</p>
+        </div>
+    </footer>
 
-  <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>

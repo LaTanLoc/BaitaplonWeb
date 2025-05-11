@@ -11,6 +11,15 @@
     <script src="JS/hoidap.js"></script>
 </head>
 <body>
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
     <!-- Top bar -->
     <div class="top-bar">
         <div class="container flex-between">
@@ -24,9 +33,10 @@
             </div>
         </div>
     </div>
+
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="logo flex-center">
                 <i class="fa-solid fa-tooth"></i>
                 <div class="logo-text">
@@ -38,7 +48,7 @@
                 <div class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></div>
                 <div class="nav-item"><a href="gioithieu.html" class="nav-link">Giới thiệu</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
                     <div class="dropdown-content">
                         <a href="dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
                         <a href="dichvuthammy/niengrang.html">Niềng răng</a>
@@ -48,7 +58,7 @@
                 </div>
                 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
                     <div class="dropdown-content">
                         <a href="dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
                         <a href="dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
@@ -58,7 +68,7 @@
                 </div>
                 <div class="nav-item"><a href="hoidap.html" class="nav-link">Hỏi đáp</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
                     <div class="dropdown-content">
                         <a href="bangia_thammy.html">Dịch vụ thẩm mỹ</a>
                         <a href="bangia_nhakhoa.html">Dịch vụ nha khoa</a>
@@ -74,7 +84,7 @@
     </nav>
 
     <!-- Banner -->
-    <section class="banner">
+    <section class="banner reveal">
         <img src="images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
         <div class="banner-text">
             <h1>Hỏi Đáp Dịch Vụ</h1>
@@ -83,7 +93,7 @@
     </section>
 
     <!-- Appointment Form -->
-    <section class="appointment-form container">
+    <section class="appointment-form container reveal">
         <h2>Đặt Lịch Hẹn</h2>
         <form id="appointment-form">
             <div class="form-row">
@@ -137,9 +147,9 @@
     </section>
 
     <!-- Q&A Section -->
-    <section class="qna-section container">
+    <section class="qna-section container reveal">
         <!-- Question Form -->
-        <div class="qna-form">
+        <div class="qna-form reveal">
             <h3>Gửi Câu Hỏi</h3>
             <form id="qna-form">
                 <div class="form-group">
@@ -157,7 +167,7 @@
         </div>
 
         <!-- Questions and Answers Display -->
-        <div class="qna-list" id="qna-list">
+        <div class="qna-list reveal" id="qna-list">
             <h3>Các Câu Hỏi và Trả Lời</h3>
             <button id="clear-data-btn" class="btn clear-btn">Xóa Dữ Liệu</button>
             <!-- Questions and answers will be dynamically loaded via JS -->
@@ -166,7 +176,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="footer-container container">
             <div class="footer-box">
                 <div class="logo flex-center">

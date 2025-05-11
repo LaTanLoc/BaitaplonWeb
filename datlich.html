@@ -10,9 +10,18 @@
     <script src="JS/trangchu.js"></script>
 </head>
 <body>
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
     <!-- Top bar -->
     <div class="top-bar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="left">
                 <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
                 <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
@@ -26,7 +35,7 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="logo flex-center">
                 <i class="fa-solid fa-tooth"></i>
                 <div class="logo-text">
@@ -38,7 +47,7 @@
                 <div class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></div>
                 <div class="nav-item"><a href="gioithieu.html" class="nav-link">Giới thiệu</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
                     <div class="dropdown-content">
                         <a href="dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
                         <a href="dichvuthammy/niengrang.html">Niềng răng</a>
@@ -48,7 +57,7 @@
                 </div>
                 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
                     <div class="dropdown-content">
                         <a href="dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
                         <a href="dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
@@ -58,7 +67,7 @@
                 </div>
                 <div class="nav-item"><a href="hoidap.html" class="nav-link">Hỏi đáp</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
                     <div class="dropdown-content">
                         <a href="bangia_thammy.html">Dịch vụ thẩm mỹ</a>
                         <a href="bangia_nhakhoa.html">Dịch vụ nha khoa</a>
@@ -74,9 +83,9 @@
     </nav>
 
     <!-- Appointment Section -->
-    <section class="appointment-section">
+    <section class="appointment-section reveal">
         <div class="appointment-container container">
-            <div class="appointment-left">
+            <div class="appointment-left reveal">
                 <h2>Lưu Ý Khi Đặt Lịch</h2>
                 <ul>
                     <li>Điền đầy đủ và chính xác thông tin cá nhân.</li>
@@ -90,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="appointment-form">
+            <div class="appointment-form reveal">
                 <h2>Đặt Lịch Hẹn Ngay</h2>
                 <form id="appointment-form">
                     <div class="form-row">
@@ -152,16 +161,16 @@
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
-        <h2>Địa Chỉ Phòng Khám</h2>
-        <div class="map-container">
+    <section class="map-section reveal">
+        <h2 class="reveal">Địa Chỉ Phòng Khám</h2>
+        <div class="map-container reveal">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.506197188625!2d105.82482287458995!3d21.012321488400896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9b8d8b2e7d%3A0x7e6e6e7f1e6e7f1e!2zMTIgQ2jDuWEgQuG7jWMsIFF1YW5nIFRydW5nLCDEkOG7kW5nIMSQYSBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1697634626741!5m2!1svi!2s" 
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="footer-container container">
             <div class="footer-box">
                 <div class="logo flex-center">

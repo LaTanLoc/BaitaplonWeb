@@ -10,9 +10,18 @@
     <script src="../JS/trangchu.js"></script>
 </head>
 <body>
-      <!-- Top bar -->
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Top bar -->
     <div class="top-bar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="left">
                 <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
                 <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
@@ -24,9 +33,9 @@
         </div>
     </div>
 
- <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="logo flex-center">
                 <i class="fa-solid fa-tooth"></i>
                 <div class="logo-text">
@@ -37,8 +46,8 @@
             <div class="nav-menu flex-center">
                 <div class="nav-item"><a href="../index.html" class="nav-link">Trang chủ</a></div>
                 <div class="nav-item"><a href="../gioithieu.html" class="nav-link">Giới thiệu</a></div>
-                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
                     <div class="dropdown-content">
                         <a href="bocrangsu.html">Bọc răng sứ</a>
                         <a href="niengrang.html">Niềng răng</a>
@@ -47,7 +56,7 @@
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
                     <div class="dropdown-content">
                         <a href="../dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
                         <a href="../dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
@@ -57,7 +66,7 @@
                 </div>
                 <div class="nav-item"><a href="../hoidap.html" class="nav-link">Hỏi đáp</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
                     <div class="dropdown-content">
                         <a href="../bangia_thammy.html">Dịch vụ thẩm mỹ</a>
                         <a href="../bangia_nhakhoa.html">Dịch vụ nha khoa</a>
@@ -72,78 +81,77 @@
         </div>
     </nav>
 
- <!-- Banner -->
- <section class="banner">
-    <img src="../images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
-    <div class="banner-text">
-        <h1>Dịch Vụ Dán Sứ Veneer</h1>
-        <p>Giải pháp thẩm mỹ hiện đại – nụ cười rạng rỡ, tự nhiên</p>
-    </div>
- </section>
-
-<!-- Appointment Form -->
-<section class="appointment-form container">
-    <h2>Đặt Lịch Hẹn</h2>
-    <form id="appointment-form">
-        <div class="form-row">
-            <div class="form-group">
-                <label for="name">Họ và Tên</label>
-                <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Số Điện Thoại</label>
-                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Nhập email" required>
-            </div>
-            <div class="form-group">
-                <label for="date">Ngày Hẹn</label>
-                <input type="date" id="date" name="date" required>
-            </div>
-            <div class="form-group">
-                <label for="time">Giờ hẹn</label>
-                <input type="time" id="time" name="time" required>
-            </div>
+    <!-- Banner -->
+    <section class="banner reveal">
+        <img src="../images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
+        <div class="banner-text">
+            <h1>Dịch Vụ Dán Sứ Veneer</h1>
+            <p>Giải pháp thẩm mỹ hiện đại – nụ cười rạng rỡ, tự nhiên</p>
         </div>
-        <div class="form-group">
-            <label for="service">Dịch Vụ</label>
-            <select id="service" name="service" required>
-                <option value="">Chọn dịch vụ</option>
-                <optgroup label="Dịch vụ thẩm mỹ">
-                    <option value="boc-rang-su">Bọc răng sứ</option>
-                    <option value="dan-su-veneer">Dán sứ Veneer</option>
-                    <option value="nieng-rang">Niềng răng</option>
-                    <option value="trong-rang-su">Trồng răng Implant</option>
-                </optgroup>
-                <optgroup label="Dịch vụ nha khoa">
-                    <option value="han-tram-rang">Hàn/trám răng</option>
-                    <option value="tay-trang">Tẩy trắng răng</option>
-                    <option value="nha-chu">Điều trị nha chu</option>
-                    <option value="nho-rang">Nhổ răng</option>
-                    <option value="lay-cao-rang">Lấy cao răng</option>
-                </optgroup>
-                <optgroup label="Khác">
-                    <option value="tuvan">Tư vấn miễn phí</option>
-                </optgroup>
-            </select>                       
-        </div>
-        <div class="form-group submit">
-            <button type="submit" class="btn submit-btn">Gửi</button>
-        </div>
-    </form>
-</section>
+    </section>
 
-<!-- Nội dung Dịch vụ -->
-<section class="service-header container">
-    <h1>Dán Sứ Veneer</h1>
-    <p>Giải pháp thẩm mỹ hiện đại giúp bạn có nụ cười rạng rỡ với lớp sứ siêu mỏng, không cần mài răng nhiều.</p>
-</section>
+    <!-- Appointment Form -->
+    <section class="appointment-form container reveal">
+        <h2>Đặt Lịch Hẹn</h2>
+        <form id="appointment-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Ngày Hẹn</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Giờ hẹn</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Dịch Vụ</label>
+                <select id="service" name="service" required>
+                    <option value="">Chọn dịch vụ</option>
+                    <optgroup label="Dịch vụ thẩm mỹ">
+                        <option value="boc-rang-su">Bọc răng sứ</option>
+                        <option value="dan-su-veneer">Dán sứ Veneer</option>
+                        <option value="nieng-rang">Niềng răng</option>
+                        <option value="trong-rang-su">Trồng răng Implant</option>
+                    </optgroup>
+                    <optgroup label="Dịch vụ nha khoa">
+                        <option value="han-tram-rang">Hàn/trám răng</option>
+                        <option value="tay-trang">Tẩy trắng răng</option>
+                        <option value="nha-chu">Điều trị nha chu</option>
+                        <option value="nho-rang">Nhổ răng</option>
+                        <option value="lay-cao-rang">Lấy cao răng</option>
+                    </optgroup>
+                    <optgroup label="Khác">
+                        <option value="tuvan">Tư vấn miễn phí</option>
+                    </optgroup>
+                </select>                       
+            </div>
+            <div class="form-group submit">
+                <button type="submit" class="btn submit-btn">Gửi</button>
+            </div>
+        </form>
+    </section>
 
-<section class="service-content container">
-    <div class="service-info">
-        <div class="service-info">
+    <!-- Nội dung Dịch vụ -->
+    <section class="service-header container reveal">
+        <h1>Dán Sứ Veneer</h1>
+        <p>Giải pháp thẩm mỹ hiện đại giúp bạn có nụ cười rạng rỡ với lớp sứ siêu mỏng, không cần mài răng nhiều.</p>
+    </section>
+
+    <section class="service-content container reveal">
+        <div class="service-info reveal">
             <h3>Giới Thiệu Về Dán Sứ Veneer</h3>
             <p>
                 Dán sứ Veneer là một phương pháp thẩm mỹ hiện đại, sử dụng miếng sứ siêu mỏng (khoảng 0.3 - 0.5mm) được thiết kế riêng cho từng răng và dán trực tiếp lên bề mặt răng thật. Đây là lựa chọn tối ưu dành cho những ai mong muốn cải thiện màu sắc, hình dáng răng mà không cần mài nhiều mô răng.
@@ -151,7 +159,7 @@
             <p>
                 Phù hợp với răng ố vàng, xỉn màu, răng thưa nhẹ, răng mẻ hoặc không đều, Veneer giúp bạn lấy lại nụ cười tươi sáng, tự nhiên và đầy tự tin – chỉ sau vài lần hẹn với bác sĩ.
             </p>
-        
+
             <h3>Quy Trình Dán Sứ Veneer</h3>
             <ol>
                 <li><strong>Bước 1 – Tư vấn và thăm khám:</strong> Bác sĩ kiểm tra tổng quát, đánh giá tình trạng răng miệng và lên kế hoạch điều trị phù hợp.</li>
@@ -160,7 +168,7 @@
                 <li><strong>Bước 4 – Gắn thử & điều chỉnh:</strong> Veneer được gắn thử để kiểm tra độ vừa khít, màu sắc và hình dáng tổng thể.</li>
                 <li><strong>Bước 5 – Gắn cố định:</strong> Khi đã hoàn toàn ưng ý, bác sĩ sử dụng keo dán chuyên dụng để cố định Veneer một cách chắc chắn, đảm bảo độ bền và thẩm mỹ lâu dài.</li>
             </ol>
-        
+
             <h3>Các Loại Veneer</h3>
             <p>Mỗi loại Veneer sẽ phù hợp với từng nhu cầu và điều kiện răng miệng khác nhau. Tại Nha Khoa Smile, chúng tôi cung cấp đa dạng lựa chọn để bạn có thể sở hữu nụ cười hoàn hảo nhất:</p>
             <ul>
@@ -181,88 +189,83 @@
                 Nha Khoa Smile không chỉ trao cho bạn một nụ cười mới – mà còn đồng hành cùng bạn gìn giữ nụ cười ấy dài lâu.
             </p>
         </div>
-    </div>
 
-    <div class="service-image">
-        <img src="../images/dansuveneer1.jpg" alt="Dán Sứ Veneer 1">
-        <img src="../images/dansuveneer2.jpg" alt="Dán Sứ Veneer 2">
-        <img src="../images/dansuveneer3.jpg" alt="Dán Sứ Veneer 3">
+        <div class="service-image reveal">
+            <img src="../images/dansuveneer1.jpg" alt="Dán Sứ Veneer 1">
+            <img src="../images/dansuveneer2.jpg" alt="Dán Sứ Veneer 2">
+            <img src="../images/dansuveneer3.jpg" alt="Dán Sứ Veneer 3">
 
-        <div class="testimonial-slider">
-            <div class="testimonial active">
-                <p class="feedback">"Răng trắng đẹp tự nhiên, không ai biết mình làm sứ luôn!"</p>
-                <p class="customer-info">– Chị Linh, tháng 1/2025</p>
+            <div class="testimonial-slider reveal">
+                <div class="testimonial active">
+                    <p class="feedback">"Răng trắng đẹp tự nhiên, không ai biết mình làm sứ luôn!"</p>
+                    <p class="customer-info">– Chị Linh, tháng 1/2025</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Không đau, không ê buốt, bác sĩ làm rất nhẹ nhàng."</p>
+                    <p class="customer-info">– Anh Dũng, tháng 12/2024</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Mình cực kỳ hài lòng vì có nụ cười sáng hơn hẳn!"</p>
+                    <p class="customer-info">– Cô Hạnh, tháng 11/2024</p>
+                </div>
             </div>
-            <div class="testimonial">
-                <p class="feedback">"Không đau, không ê buốt, bác sĩ làm rất nhẹ nhàng."</p>
-                <p class="customer-info">– Anh Dũng, tháng 12/2024</p>
+
+            <section class="service-summary container reveal">
+                <div class="summary-content">
+                    <h3>Tóm Tắt Dịch Vụ</h3>
+                    <ul>
+                        <li><strong>Tên dịch vụ:</strong> Dán Sứ Veneer</li>
+                        <li><strong>Mô tả:</strong> Gắn lớp sứ mỏng lên mặt răng, cải thiện thẩm mỹ mà ít mài răng.</li>
+                        <li><strong>Chỉ định:</strong> Răng thưa, xỉn màu, mòn men nhẹ, không đều màu.</li>
+                        <li><strong>Chống chỉ định:</strong> Răng hô nặng, sâu lớn hoặc vỡ lớn.</li>
+                        <li><strong>Thời gian:</strong> 2–3 lần hẹn, mỗi lần 30–45 phút</li>
+                        <li><strong>Chi phí:</strong> 3,000,000 – 8,000,000 VNĐ/răng</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <div class="logo flex-center">
+                    <i class="fa-solid fa-tooth"></i>
+                    <div class="logo-text">
+                        <div class="main-title">Nha Khoa Smile</div>
+                        <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial">
-                <p class="feedback">"Mình cực kỳ hài lòng vì có nụ cười sáng hơn hẳn!"</p>
-                <p class="customer-info">– Cô Hạnh, tháng 11/2024</p>
+            <div class="footer-box">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
+                <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
+                <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
+            </div>
+            <div class="footer-box">
+                <h3>Nha Khoa Smile</h3>
+                <a href="../gioithieu.html">Giới thiệu</a>
+                <a href="#">Miễn trừ trách nhiệm</a>
+                <a href="#">Chính sách bảo hành</a>
+                <a href="#">Chính sách bảo mật & quyền riêng tư</a>
+            </div>
+            <div class="footer-box social">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-
-        <section class="service-summary container">
-            <div class="summary-content">
-                <h3>Tóm Tắt Dịch Vụ</h3>
-                <ul>
-                    <li><strong>Tên dịch vụ:</strong> Dán Sứ Veneer</li>
-                    <li><strong>Mô tả:</strong> Gắn lớp sứ mỏng lên mặt răng, cải thiện thẩm mỹ mà ít mài răng.</li>
-                    <li><strong>Chỉ định:</strong> Răng thưa, xỉn màu, mòn men nhẹ, không đều màu.</li>
-                    <li><strong>Chống chỉ định:</strong> Răng hô nặng, sâu lớn hoặc vỡ lớn.</li>
-                    <li><strong>Thời gian:</strong> 2–3 lần hẹn, mỗi lần 30–45 phút</li>
-                    <li><strong>Chi phí:</strong> 3,000,000 – 8,000,000 VNĐ/răng</li>
-                </ul>
-            </div>
-        </section>
-    </div>
-</section>
-
-<!--Footer-->
-<footer class="footer">
-    <div class="footer-container container">
-      <div class="footer-box">
-        <div class="logo flex-center">
-          <i class="fa-solid fa-tooth"></i>
-          <div class="logo-text">
-            <div class="main-title">Nha Khoa Smile</div>
-            <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
-          </div>
+        <div class="footer-bottom">
+            <p>© Nha Khoa Smile. All Rights Reserved.</p>
+            <p>Thiết kế bởi Nhóm 13</p>
         </div>
-      </div>
+    </footer>
 
-      <div class="footer-box">
-        <h3>Thông Tin Liên Hệ</h3>
-        <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
-        <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
-        <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
-      </div>
-
-      <div class="footer-box">
-        <h3>Nha Khoa Smile</h3>
-        <a href="../gioithieu.html">Giới thiệu</a>
-        <a href="#">Miễn trừ trách nhiệm</a>
-        <a href="#">Chính sách bảo hành</a>
-        <a href="#">Chính sách bảo mật & quyền riêng tư</a>
-      </div>
-
-      <div class="footer-box social">
-        <h3>Kết Nối Với Chúng Tôi</h3>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© Nha Khoa Smile. All Rights Reserved.</p>
-      <p>Thiết kế bởi Nhóm 13</p>
-    </div>
-</footer>
-
-<button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>

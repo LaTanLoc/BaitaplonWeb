@@ -10,8 +10,18 @@
     <script src="../JS/trangchu.js"></script>
 </head>
 <body>
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Top bar -->
     <div class="top-bar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="left">
                 <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
                 <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
@@ -25,7 +35,7 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container flex-center">
+        <div class="container flex-between">
             <div class="logo flex-center">
                 <i class="fa-solid fa-tooth"></i>
                 <div class="logo-text">
@@ -36,27 +46,27 @@
             <div class="nav-menu flex-center">
                 <div class="nav-item"><a href="../index.html" class="nav-link">Trang chủ</a></div>
                 <div class="nav-item"><a href="../gioithieu.html" class="nav-link">Giới thiệu</a></div>
-                  <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
-                <div class="dropdown-content">
-                    <a href="../dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
-                    <a href="../dichvuthammy/niengrang.html">Niềng răng</a>
-                    <a href="../dichvuthammy/dansuveneer.html">Dán sứ Veneer</a>
-                    <a href="../dichvuthammy/trongrang.html">Trồng răng Implant</a>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <div class="dropdown-content">
+                        <a href="../dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
+                        <a href="../dichvuthammy/niengrang.html">Niềng răng</a>
+                        <a href="../dichvuthammy/dansuveneer.html">Dán sứ Veneer</a>
+                        <a href="../dichvuthammy/trongrang.html">Trồng răng Implant</a>
+                    </div>
                 </div>
-            </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
-                <div class="dropdown-content">
-                    <a href="hamtram.html">Hàn/trám răng</a>
-                    <a href="dieutrinhauchu.html">Điều trị nha chu</a>
-                    <a href="taytrang.html">Tẩy trắng/lấy cao răng</a>
-                    <a href="nhorang.html">Nhổ răng</a>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <div class="dropdown-content">
+                        <a href="hamtram.html">Hàn/trám răng</a>
+                        <a href="dieutrinhauchu.html">Điều trị nha chu</a>
+                        <a href="taytrang.html">Tẩy trắng/lấy cao răng</a>
+                        <a href="nhorang.html">Nhổ răng</a>
+                    </div>
                 </div>
-            </div>
                 <div class="nav-item"><a href="../hoidap.html" class="nav-link">Hỏi đáp</a></div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
                     <div class="dropdown-content">
                         <a href="../bangia_thammy.html">Dịch vụ thẩm mỹ</a>
                         <a href="../bangia_nhakhoa.html">Dịch vụ nha khoa</a>
@@ -70,8 +80,9 @@
             </div>
         </div>
     </nav>
+
     <!-- Banner -->
-    <section class="banner">
+    <section class="banner reveal">
         <img src="../images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
         <div class="banner-text">
             <h1>Dịch Vụ Hàn/Trám Răng</h1>
@@ -80,7 +91,7 @@
     </section>
 
     <!-- Appointment Form -->
-    <section class="appointment-form container">
+    <section class="appointment-form container reveal">
         <h2>Đặt Lịch Hẹn</h2>
         <form id="appointment-form">
             <div class="form-row">
@@ -134,14 +145,14 @@
     </section>
 
     <!-- Service Header -->
-    <section class="service-header container">
+    <section class="service-header container reveal">
         <h1>Hàn/Trám Răng</h1>
         <p>Giải pháp phục hồi cấu trúc răng tổn thương hiệu quả và tiết kiệm</p>
     </section>
 
     <!-- Service Content -->
-    <section class="service-content container">
-        <div class="service-info">
+    <section class="service-content container reveal">
+        <div class="service-info reveal">
             <h3>Giới Thiệu Về Hàn/Trám Răng</h3>
             <p>Hàn/trám răng là thủ thuật sử dụng vật liệu nhân tạo như composite hoặc amalgam để phục hồi hình dạng và chức năng cho răng bị sâu, mẻ, hoặc gãy nhẹ. Đây là giải pháp phổ biến, an toàn và hiệu quả để bảo vệ răng khỏi hư tổn thêm. Tại Nha Khoa Smile, dịch vụ hàn/trám răng mang lại:</p>
             <ul>
@@ -204,11 +215,11 @@
             </ul>
         </div>
 
-        <div class="service-image">
+        <div class="service-image reveal">
             <img src="../images/hamtram1.jpg" alt="Hàn trám răng 1">
             <img src="../images/hamtram2.jpg" alt="Hàn trám răng 2">
 
-            <div class="testimonial-slider">
+            <div class="testimonial-slider reveal">
                 <div class="testimonial active">
                     <p class="feedback">"Trám răng nhanh, không đau, răng nhìn như mới!"</p>
                     <p class="customer-info">– Anh Quy, tháng 1/2025</p>
@@ -224,7 +235,7 @@
             </div>
 
             <!-- Service Summary Section -->
-            <section class="service-summary container">
+            <section class="service-summary container reveal">
                 <div class="summary-content">
                     <h3>Tóm Tắt Dịch Vụ</h3>
                     <ul>
@@ -242,7 +253,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="footer-container container">
             <div class="footer-box">
                 <div class="logo flex-center">
