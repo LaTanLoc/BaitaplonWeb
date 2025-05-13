@@ -4,74 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nha Khoa Smile - Hàn/Trám Răng</title>
+    <link rel="stylesheet" href="../CSS/trangchu.css">
     <link rel="stylesheet" href="../CSS/noidung.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="../JS/trangchu.js"></script>
 </head>
 <body>
-     <!-- Top bar -->
-     <div class="top-bar flex-center container">
-        <div class="left">
-            <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
-            <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="right">
-            <span><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</span>
-            <span><i class="fa-solid fa-phone"></i> 0909 987 654</span>
+    </div>
+
+    <!-- Top bar -->
+    <div class="top-bar">
+        <div class="container flex-between">
+            <div class="left">
+                <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
+                <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
+            </div>
+            <div class="right">
+                <span><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> 0909 987 654</span>
+            </div>
         </div>
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar flex-center container">
-        <div class="logo flex-center">
-        <i class="fa-solid fa-tooth"></i>
-        <div class="logo-text">
-            <div class="main-title">Nha Khoa Smile</div>
-            <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+    <nav class="navbar">
+        <div class="container flex-between">
+            <div class="logo flex-center">
+                <i class="fa-solid fa-tooth"></i>
+                <div class="logo-text">
+                    <div class="main-title">Nha Khoa Smile</div>
+                    <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                </div>
+            </div>
+            <div class="nav-menu flex-center">
+                <div class="nav-item"><a href="../index.html" class="nav-link">Trang chủ</a></div>
+                <div class="nav-item"><a href="../gioithieu.html" class="nav-link">Giới thiệu</a></div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <div class="dropdown-content">
+                        <a href="../dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
+                        <a href="../dichvuthammy/niengrang.html">Niềng răng</a>
+                        <a href="../dichvuthammy/dansuveneer.html">Dán sứ Veneer</a>
+                        <a href="../dichvuthammy/trongrang.html">Trồng răng Implant</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <div class="dropdown-content">
+                        <a href="hamtram.html">Hàn/trám răng</a>
+                        <a href="dieutrinhauchu.html">Điều trị nha chu</a>
+                        <a href="taytrang.html">Tẩy trắng/lấy cao răng</a>
+                        <a href="nhorang.html">Nhổ răng</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="../hoidap.html" class="nav-link">Hỏi đáp</a></div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <div class="dropdown-content">
+                        <a href="../bangia_thammy.html">Dịch vụ thẩm mỹ</a>
+                        <a href="../bangia_nhakhoa.html">Dịch vụ nha khoa</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../datlich.html" class="nav-link">
+                        <button class="btn appointment-btn">Đặt lịch</button>
+                    </a>
+                </div>
+            </div>
         </div>
-        </div>
+    </nav>
 
-        <div class="nav-menu flex-center">
-        <div class="nav-item"><a href="../trangchu.html" class="nav-link">Trang chủ</a></div>
-        <div class="nav-item"><a href="../gioithieu.html" class="nav-link">Giới thiệu</a></div>
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
-            <div class="dropdown-content">
-                <a href="bocrangsu.html">Bọc răng sứ</a>
-                <a href="nieng-rang.html">Niềng răng</a>
-                <a href="dansuvenner.html">Dán sứ Veneer</a>
-                <a href="trongrang.html">Trồng răng Implant</a>
-            </div>
-        </div>
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
-            <div class="dropdown-content">
-                <a href="../dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
-                <a href="../dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
-                <a href="../dichvunhakhoa/taytrang.html">Tẩy trắng/lấy cao răng</a>
-                <a href="../dichvunhakhoa/nhorang.html">Nhổ răng</a>
-            </div>
-        </div>
-        <div class="nav-item"><a href="../phanhoikh.html" class="nav-link">Phản hồi KH</a></div>
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
-            <div class="dropdown-content">
-                <a href="../bangia_thammy.html">Dịch vụ thẩm mỹ</a>
-                <a href="../bangia_nhakhoa.html">Dịch vụ nha khoa</a>
-            </div>
-        </div>
-    </div>
-    
-        <div class="nav-item">
-            <a href="../datlich.html" class="nav-link">
-                <button class="btn appointment-btn">Đặt lịch</button>
-            </a>
-        </div>
-        
-        </nav>
-    
     <!-- Banner -->
-    <section class="banner">
+    <section class="banner reveal">
         <img src="../images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
         <div class="banner-text">
             <h1>Dịch Vụ Hàn/Trám Răng</h1>
@@ -79,61 +90,209 @@
         </div>
     </section>
 
-    <section class="service-header container">
+    <!-- Appointment Form -->
+    <section class="appointment-form container reveal">
+        <h2>Đặt Lịch Hẹn</h2>
+        <form id="appointment-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Ngày Hẹn</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Giờ hẹn</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Dịch Vụ</label>
+                <select id="service" name="service" required>
+                    <option value="">Chọn dịch vụ</option>
+                    <optgroup label="Dịch vụ thẩm mỹ">
+                        <option value="boc-rang-su">Bọc răng sứ</option>
+                        <option value="nieng-rang">Niềng răng</option>
+                        <option value="dan-su-veneer">Dán sứ Veneer</option>
+                        <option value="trong-rang-su">Trồng răng Implant</option>
+                    </optgroup>
+                    <optgroup label="Dịch vụ nha khoa">
+                        <option value="han-tram-rang">Hàn/trám răng</option>
+                        <option value="tay-trang">Tẩy trắng răng</option>
+                        <option value="nha-chu">Điều trị nha chu</option>
+                        <option value="nho-rang">Nhổ răng</option>
+                        <option value="lay-cao-rang">Lấy cao răng</option>
+                    </optgroup>
+                    <optgroup label="Khác">
+                        <option value="tuvan">Tư vấn miễn phí</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-group submit">
+                <button type="submit" class="btn submit-btn">Gửi</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Service Header -->
+    <section class="service-header container reveal">
         <h1>Hàn/Trám Răng</h1>
         <p>Giải pháp phục hồi cấu trúc răng tổn thương hiệu quả và tiết kiệm</p>
     </section>
 
-    <section class="service-content container">
-        <div class="service-info">
-            <h3>Giới Thiệu</h3>
-            <p>Hàn/trám răng là thủ thuật sử dụng vật liệu nhân tạo như composite hoặc amalgam để phục hồi hình dạng và chức năng cho răng bị sâu, mẻ hoặc gãy nhẹ.</p>
+    <!-- Service Content -->
+    <section class="service-content container reveal">
+        <div class="service-info reveal">
+            <h3>Giới Thiệu Về Hàn/Trám Răng</h3>
+            <p>Hàn/trám răng là thủ thuật sử dụng vật liệu nhân tạo như composite hoặc amalgam để phục hồi hình dạng và chức năng cho răng bị sâu, mẻ, hoặc gãy nhẹ. Đây là giải pháp phổ biến, an toàn và hiệu quả để bảo vệ răng khỏi hư tổn thêm. Tại Nha Khoa Smile, dịch vụ hàn/trám răng mang lại:</p>
             <ul>
-                <li>Thẩm mỹ cao, màu sắc giống răng thật</li>
-                <li>Thời gian thực hiện nhanh – chỉ 15–30 phút/răng</li>
-                <li>Không gây đau, an toàn với cơ thể</li>
+                <li><strong>Thẩm mỹ cao:</strong> Vật liệu trám có màu sắc giống răng thật, đảm bảo nụ cười tự nhiên.</li>
+                <li><strong>Khôi phục chức năng:</strong> Tái tạo cấu trúc răng, giúp ăn nhai thoải mái và ngăn ngừa sâu răng lan rộng.</li>
+                <li><strong>Tiết kiệm chi phí:</strong> Giải pháp kinh tế so với các phương pháp phục hình phức tạp như bọc răng sứ.</li>
+                <li><strong>An toàn và không đau:</strong> Quy trình nhẹ nhàng, không gây khó chịu, phù hợp với mọi lứa tuổi.</li>
             </ul>
 
-            <h3>Quy Trình Thực Hiện</h3>
+            <h3>Quy Trình Hàn/Trám Răng</h3>
+            <p>Quy trình hàn/trám răng tại Nha Khoa Smile được thực hiện chuyên nghiệp qua các bước sau:</p>
             <ol>
-                <li>Vệ sinh răng và làm sạch vết sâu</li>
-                <li>Bôi thuốc và tạo hình vật liệu trám</li>
-                <li>Dùng đèn chiếu làm cứng vật liệu</li>
-                <li>Điều chỉnh khớp cắn, đánh bóng</li>
+                <li><strong>Lần hẹn 1 - Thăm khám và chuẩn bị:</strong>
+                    <ul>
+                        <li>Kiểm tra tình trạng răng miệng, xác định mức độ sâu răng hoặc tổn thương.</li>
+                        <li>Chụp X-quang (nếu cần) để đánh giá chính xác mức độ sâu và cấu trúc răng.</li>
+                        <li>Tư vấn loại vật liệu trám phù hợp (composite, amalgam, hoặc GIC).</li>
+                    </ul>
+                </li>
+                <li><strong>Lần hẹn 2 - Vệ sinh và làm sạch:</strong>
+                    <ul>
+                        <li>Gây tê cục bộ (nếu cần) để đảm bảo không đau trong quá trình thực hiện.</li>
+                        <li>Làm sạch vùng răng bị sâu hoặc tổn thương, loại bỏ hoàn toàn mô hỏng.</li>
+                        <li>Vệ sinh và tạo bề mặt thích hợp để vật liệu trám bám chắc.</li>
+                    </ul>
+                </li>
+                <li><strong>Lần hẹn 3 - Hàn/trám và hoàn thiện:</strong>
+                    <ul>
+                        <li>Bôi keo kết dính và đặt vật liệu trám (composite hoặc amalgam) lên vùng răng tổn thương.</li>
+                        <li>Dùng đèn chiếu chuyên dụng để làm cứng vật liệu trám trong vài giây.</li>
+                        <li>Tạo hình và điều chỉnh vật liệu để răng trông tự nhiên và khớp cắn thoải mái.</li>
+                    </ul>
+                </li>
+                <li><strong>Lần hẹn 4 - Kiểm tra và đánh bóng:</strong>
+                    <ul>
+                        <li>Đánh bóng bề mặt răng để đảm bảo thẩm mỹ và giảm nguy cơ bám mảng bám.</li>
+                        <li>Kiểm tra khớp cắn và điều chỉnh nếu cần để đảm bảo cảm giác ăn nhai tự nhiên.</li>
+                        <li>Hướng dẫn chăm sóc răng sau khi trám để duy trì độ bền lâu dài.</li>
+                    </ul>
+                </li>
             </ol>
 
-            <h3>Chi Phí Và Bảo Hành</h3>
+            <h3>Các Loại Vật Liệu Trám Răng</h3>
+            <p>Nha Khoa Smile sử dụng các loại vật liệu trám chất lượng cao, phù hợp với nhu cầu và tình trạng răng của khách hàng:</p>
             <ul>
-                <li>Chi phí: từ 200.000đ – 500.000đ/răng</li>
-                <li>Bảo hành từ 6 – 12 tháng tùy loại vật liệu</li>
+                <li><strong>Composite:</strong> Màu sắc giống răng thật, thẩm mỹ cao, phù hợp cho răng cửa và các vị trí dễ thấy.</li>
+                <li><strong>Amalgam:</strong> Độ bền cao, chi phí thấp, thường dùng cho răng hàm chịu lực nhai lớn.</li>
+                <li><strong>GIC (Glass Ionomer Cement):</strong> Có khả năng phóng thích fluoride, phù hợp cho trẻ em hoặc răng sữa.</li>
+                <li><strong>Trám Inlay/Onlay:</strong> Dùng cho các trường hợp răng tổn thương lớn, được chế tác từ sứ hoặc vàng, đảm bảo độ bền và thẩm mỹ.</li>
+            </ul>
+
+            <h3>Cam Kết Của Nha Khoa Smile Và Chính Sách Bảo Hành</h3>
+            <p>Nha Khoa Smile cam kết mang đến dịch vụ hàn/trám răng chất lượng với:</p>
+            <ul>
+                <li><strong>Vật liệu cao cấp:</strong> Sử dụng vật liệu trám an toàn, đạt chuẩn quốc tế, không gây kích ứng.</li>
+                <li><strong>Đội ngũ chuyên môn:</strong> Bác sĩ giàu kinh nghiệm, thực hiện chính xác và tỉ mỉ.</li>
+                <li><strong>Quy trình an toàn:</strong> Tuân thủ nghiêm ngặt tiêu chuẩn vệ sinh, đảm bảo không đau và không nhiễm trùng.</li>
+                <li><strong>Chính sách bảo hành:</strong> Bảo hành từ 6 tháng đến 2 năm tùy loại vật liệu (composite: 1-2 năm, amalgam: 6-12 tháng), hỗ trợ sửa chữa miễn phí nếu vật liệu trám bị bong tróc do lỗi kỹ thuật.</li>
+                <li><strong>Hỗ trợ khách hàng:</strong> Tư vấn chăm sóc răng miệng sau trám và lịch tái khám định kỳ để kiểm tra độ bền.</li>
             </ul>
         </div>
 
-        <div class="service-image">
+        <div class="service-image reveal">
             <img src="../images/hamtram1.jpg" alt="Hàn trám răng 1">
             <img src="../images/hamtram2.jpg" alt="Hàn trám răng 2">
 
-            <div class="testimonial-slider">
+            <div class="testimonial-slider reveal">
                 <div class="testimonial active">
                     <p class="feedback">"Trám răng nhanh, không đau, răng nhìn như mới!"</p>
-                    <p class="customer-info">– Quy, 2025</p>
+                    <p class="customer-info">– Anh Quy, tháng 1/2025</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Bác sĩ rất nhẹ nhàng, tôi không cảm thấy khó chịu gì cả."</p>
+                    <p class="customer-info">– Chị Hương, tháng 12/2024</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Răng sau khi trám rất thẩm mỹ, ăn nhai thoải mái!"</p>
+                    <p class="customer-info">– Cô Lan, tháng 11/2024</p>
                 </div>
             </div>
 
-            <section class="service-summary container">
+            <!-- Service Summary Section -->
+            <section class="service-summary container reveal">
                 <div class="summary-content">
                     <h3>Tóm Tắt Dịch Vụ</h3>
                     <ul>
                         <li><strong>Tên dịch vụ:</strong> Hàn/Trám Răng</li>
-                        <li><strong>Thời gian thực hiện:</strong> 15–30 phút/răng</li>
-                        <li><strong>Chi phí:</strong> 200.000 – 500.000 VNĐ/răng</li>
-                        <li><strong>Chỉ định:</strong> Răng sâu nhẹ, mẻ, gãy nhỏ</li>
+                        <li><strong>Mô tả:</strong> Sử dụng vật liệu nhân tạo để phục hồi răng sâu, mẻ, hoặc gãy nhẹ, đảm bảo thẩm mỹ và chức năng.</li>
+                        <li><strong>Chỉ định:</strong> Răng sâu nhẹ, mẻ, gãy nhỏ, hoặc cần bảo vệ sau điều trị tủy.</li>
+                        <li><strong>Chống chỉ định:</strong> Răng sâu quá nặng, tổn thương lớn cần bọc sứ, hoặc bệnh nhân dị ứng với vật liệu trám.</li>
+                        <li><strong>Thời gian thực hiện:</strong> 15-30 phút/răng (tùy mức độ tổn thương).</li>
+                        <li><strong>Thời gian hồi phục:</strong> Hồi phục ngay, có thể ăn nhai sau 1-2 giờ.</li>
+                        <li><strong>Chi phí trung bình:</strong> 200,000 - 500,000 VNĐ/răng (tùy vật liệu).</li>
                     </ul>
                 </div>
             </section>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer reveal">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <div class="logo flex-center">
+                    <i class="fa-solid fa-tooth"></i>
+                    <div class="logo-text">
+                        <div class="main-title">Nha Khoa Smile</div>
+                        <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
+                <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
+                <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
+            </div>
+            <div class="footer-box">
+                <h3>Nha Khoa Smile</h3>
+                <a href="../gioithieu.html">Giới thiệu</a>
+                <a href="#">Miễn trừ trách nhiệm</a>
+                <a href="#">Chính sách bảo hành</a>
+                <a href="#">Chính sách bảo mật & quyền riêng tư</a>
+            </div>
+            <div class="footer-box social">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Nha Khoa Smile. All Rights Reserved.</p>
+            <p>Thiết kế bởi Nhóm 13</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
     <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>

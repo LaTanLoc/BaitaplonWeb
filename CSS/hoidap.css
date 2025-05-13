@@ -1,0 +1,138 @@
+/* Q&A Section */
+.qna-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.qna-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #1c2526;
+}
+
+.qna-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #65676b;
+}
+
+.qna-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qna-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1c2526;
+}
+
+.qna-form .form-group {
+    margin-bottom: 15px;
+}
+
+.qna-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.qna-form input,
+.qna-form select,
+.qna-form textarea {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.qna-form .submit-btn {
+    background: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.qna-form .submit-btn:hover {
+    background: #2980b9;
+}
+
+.qna-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.qna-list h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1c2526;
+}
+
+.qna-item {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.qna-item .question {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.qna-item .answer {
+    color: green;
+    margin-top: 5px;
+}
+
+.qna-item button {
+    margin-top: 10px;
+    background: #42b72a;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.qna-item button:hover {
+    background: #36a420;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    background: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background 0.3s;
+}
+
+.pagination button:hover {
+    background: #2980b9;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.clear-btn {
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+.clear-btn:hover {
+    background: #c0392b;
+}
