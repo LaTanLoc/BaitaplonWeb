@@ -1,3 +1,4 @@
+// JavaScript code for the homepage of a website
 document.addEventListener("DOMContentLoaded", function () {
     const qnaForm = document.getElementById("qna-form");
     const qnaList = document.getElementById("qna-list");

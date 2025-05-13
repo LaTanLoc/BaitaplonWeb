@@ -1,3 +1,4 @@
+// JavaScript code for the homepage
 window.addEventListener("load", () => {
   const spinner = document.getElementById("spinner");
   const mainContent = document.querySelector("body > *:not(#spinner)");
