@@ -3,6 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>Nha Khoa Smile - Bảng giá dịch vụ thẩm mỹ</title>
+    <link rel="stylesheet" href="CSS/bangia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="JS/trangchu.js" defer></script>
+</head>
+
+<body>
+   <!-- Top bar -->
+  <div class="top-bar flex-center container">
+    <div class="left">
+      <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
+      <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
+    </div>
+      <div class="right">
+        <span><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</span>
+        <span><i class="fa-solid fa-phone"></i> 0909 987 654</span>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar flex-center container">
+      <div class="logo flex-center">
+        <i class="fa-solid fa-tooth"></i>
+        <div class="logo-text">
+          <div class="main-title">Nha Khoa Smile</div>
+          <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+        </div>
+      </div>
+
+      <div class="nav-menu flex-center">
+        <div class="nav-item"><a href="trangchu.html" class="nav-link">Trang chủ</a></div>
+        <div class="nav-item"><a href="gioithieu.html" class="nav-link">Giới thiệu</a></div>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+          <div class="dropdown-content">
+            <a href="dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
+            <a href="dichvuthammy/niengrang.html">Niềng răng</a>
+            <a href="dichvuthammy/dansuvenner.html">Dán sứ Veneer</a>
+            <a href="dichvuthammy/trongrang.html">Trồng răng Implant</a>
+          </div>
+        </div>
+        
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+          <div class="dropdown-content">
+            <a href="dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
+            <a href="dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
+            <a href="dichvunhakhoa/taytrang.html">Tẩy trắng/lấy cao răng</a>
+            <a href="dichvunhakhoa/nhorang.html">Nhổ răng</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="phanhoikh.html" class="nav-link">Phản hồi KH</a></div>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Bảng giá</a>
+          <div class="dropdown-content">
+            <a href="bangia_thammy.html">Dịch vụ thẩm mỹ</a>
+            <a href="bangia_nhakhoa.html">Dịch vụ nha khoa</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="datlich.html" class="nav-link">
+            <button class="btn appointment-btn">Đặt lịch</button>
+        </a>
+    </div>
+    </nav>
+
+  <!-- Banner -->
+  <section class="banner">
+    <img src="images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
+    <div class="banner-text">
+      <h1>Chào mừng bạn đến với Nha Khoa Smile</h1>
+      <p>Đồng hành cùng bạn với các dịch vụ nha khoa chất lượng cao</p>
+    </div>
+  </section>
+
+  <!-- Appointment Form -->
+  <section class="appointment-form container">
+    <h2>Đặt Lịch Hẹn</h2>
+    <form id="appointment-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Họ và Tên</label>
+          <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Số Điện Thoại</label>
+          <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Nhập email" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Ngày Hẹn</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Giờ hẹn</label>
+          <input type="time" id="time" name="time" required>
+      </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Dịch Vụ</label>
+          <select id="service" name="service" required>
+            <option value="">Chọn dịch vụ</option>
+            <optgroup label="Dịch vụ thẩm mỹ">
+                <option value="boc-rang-su">Bọc răng sứ</option>
+                <option value="nieng-rang">Niềng răng</option>
+                <option value="dan-su-veneer">Dán sứ Veneer</option>
+                <option value="trong-rang-su">Trồng răng Implant</option>
+            </optgroup>
+            <optgroup label="Dịch vụ nha khoa">
+                <option value="han-tram-rang">Hàn/trám răng</option>
+                <option value="tay-trang">Tẩy trắng răng</option>
+                <option value="nha-chu">Điều trị nha chu</option>
+                <option value="nho-rang">Nhổ răng</option>
+                <option value="lay-cao-rang">Lấy cao răng</option>
+            </optgroup>
+            <optgroup label="Khác">
+                <option value="tuvan">Tư vấn miễn phí</option>
+            </optgroup>
+        </select>
+        
+          </select>
+        </div>
+        <div class="form-group submit">
+          <button type="submit" class="btn submit-btn">Gửi</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Bảng Giá Dịch Vụ Thẩm Mỹ -->
+  <section class="testimonial-section container">
+    <h2>Bảng Giá Dịch Vụ Thẩm Mỹ </h2>
+    <div class="price-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Dịch vụ thẩm mỹ</th>
+            <th>Giá (VNĐ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bọc răng sứ Cercon</td>
+            <td>2.500.000 - 4.000.000</td>
+          </tr>
+          <tr>
+            <td>Bọc răng sứ Zirconia cao cấp</td>
+            <td>4.000.000 - 6.000.000</td>
+          </tr>
+          <tr>
+            <td>Dán sứ Veneer siêu mỏng</td>
+            <td>6.000.000 - 10.000.000</td>
+          </tr>
+          <tr>
+            <td>Niềng răng mắc cài kim loại</td>
+            <td>25.000.000 - 35.000.000</td>
+          </tr>
+          <tr>
+            <td>Niềng răng mắc cài sứ</td>
+            <td>35.000.000 - 45.000.000</td>
+          </tr>
+          <tr>
+            <td>Niềng răng Invisalign (trong suốt)</td>
+            <td>60.000.000 - 100.000.000</td>
+          </tr>
+          <tr>
+            <td>Trồng răng Implant Hàn Quốc</td>
+            <td>12.000.000 - 16.000.000</td>
+          </tr>
+          <tr>
+            <td>Trồng răng Implant Mỹ</td>
+            <td>18.000.000 - 25.000.000</td>
+          </tr>
+          <tr>
+            <td>Tẩy trắng răng Zoom Whitening</td>
+            <td>2.000.000 - 3.000.000</td>
+          </tr>
+          <tr>
+            <td>Gắn đá thẩm mỹ lên răng</td>
+            <td>700.000 - 1.500.000</td>
+          </tr>
+          <tr>
+            <td>Tư vấn thiết kế nụ cười (Smile Design)</td>
+            <td>Miễn phí</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-box">
+        <div class="logo flex-center">
+          <i class="fa-solid fa-tooth"></i>
+          <div class="logo-text">
+            <div class="main-title">Nha Khoa Smile</div>
+            <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Thông Tin Liên Hệ</h3>
+        <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
+        <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
+        <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
+      </div>
+
+      <div class="footer-box">
+        <h3>Nha Khoa Smile</h3>
+        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="#">Miễn trừ trách nhiệm</a>
+        <a href="#">Chính sách bảo hành</a>
+        <a href="#">Chính sách bảo mật & quyền riêng tư</a>
+      </div>
+
+      <div class="footer-box social">
+        <h3>Kết Nối Với Chúng Tôi</h3>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Nha Khoa Smile. All Rights Reserved.</p>
+      <p>Thiết kế bởi Nhóm 13</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>
+=======
     <title>Nha Khoa Smile - Bảng Giá Dịch Vụ Thẩm Mỹ</title>
     <link rel="stylesheet" href="CSS/trangchu.css">
     <link rel="stylesheet" href="CSS/banggia.css">
@@ -228,3 +472,4 @@
     <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>
+>>>>>>> bc9fede935d9342a1bfe08ae3399caf390e36290
