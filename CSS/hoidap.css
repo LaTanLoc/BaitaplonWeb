@@ -1,67 +1,91 @@
 /* Q&A Section */
 
 .qna-section {
-    padding: 40px 0;
+    padding: 60px 20px;
     text-align: center;
+    background-color: #f4f6f9;
 }
 
 .qna-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 10px;
-    color: #1c2526;
+    color: #2c3e50;
 }
 
 .qna-section p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #65676b;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
 }
 
+/* Q&A Form */
+
 .qna-form {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 50px;
+    max-width: 650px;
+    text-align: left;
 }
 
 .qna-form h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #1c2526;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
 }
 
 .qna-form .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .qna-form label {
     display: block;
     font-size: 1rem;
-    margin-bottom: 5px;
+    font-weight: 500;
     color: #34495e;
+    margin-bottom: 8px;
 }
 
 .qna-form input,
 .qna-form select,
 .qna-form textarea {
-    border: 1px solid #ddd;
-    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+    transition: border 0.3s;
+}
+
+.qna-form input:focus,
+.qna-form textarea:focus,
+.qna-form select:focus {
+    border-color: #3498db;
+    outline: none;
 }
 
 .qna-form .submit-btn {
+    width: 100%;
+    padding: 12px;
     background: #3498db;
     color: #fff;
-    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
     transition: background 0.3s;
 }
 
 .qna-form .submit-btn:hover {
     background: #2980b9;
 }
+
+/* Q&A List */
 
 .qna-list {
     max-width: 800px;
@@ -70,67 +94,70 @@
 }
 
 .qna-list h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #1c2526;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-align: center;
 }
 
 .qna-item {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px;
-    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.qna-item:hover {
+    transform: translateY(-2px);
 }
 
 .qna-item .question {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2d3436;
+    margin-bottom: 10px;
 }
 
 .qna-item .answer {
-    color: green;
+    color: #2ecc71;
+    font-size: 1rem;
     margin-top: 5px;
 }
 
+/* Button for reply or show more */
+
 .qna-item button {
-    margin-top: 10px;
-    background: #42b72a;
+    margin-top: 12px;
+    background: #2ecc71;
     color: #fff;
-    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
     transition: background 0.3s;
 }
 
 .qna-item button:hover {
-    background: #36a420;
+    background: #27ae60;
 }
 
-.pagination {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.pagination button {
-    background: #3498db;
-    color: #fff;
-    border-radius: 5px;
-    margin: 0 5px;
-    transition: background 0.3s;
-}
-
-.pagination button:hover {
-    background: #2980b9;
-}
-
-.pagination button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
+/* Clear Button */
 
 .clear-btn {
+    display: inline-block;
+    padding: 10px 20px;
     background: #e74c3c;
     color: #fff;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: 500;
     transition: background 0.3s;
 }
 

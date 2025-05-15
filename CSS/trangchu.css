@@ -837,3 +837,42 @@ body {
   transform: translateY(0);
 }
 
+.promo-bubble {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.promo-content {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  max-width: 250px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.promo-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+

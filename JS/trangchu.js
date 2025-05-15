@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll();
 
     // Testimonial Slider
+    
     class TestimonialSlider {
         constructor(selector = '.testimonial', interval = 4000) {
             this.testimonials = document.querySelectorAll(selector);
@@ -261,6 +262,34 @@ document.addEventListener("DOMContentLoaded", () => {
         if ($(e.target).is('.doctor-info')) {
             $('.doctor-info').fadeOut();
         }
+    });
+});
+    window.addEventListener("load", function () {
+    const content = document.querySelector('.promo-content');
+    const promoCircle = document.querySelector('.promo-circle');
+
+    // Hiện bong bóng sau khi load
+    setTimeout(() => {
+        content.style.opacity = '1';
+        content.style.transform = 'translateY(0)';
+    }, 500);
+
+    // Ẩn bong bóng sau 7 giây
+    setTimeout(() => {
+        content.style.opacity = '0';
+        content.style.transform = 'translateY(20px)';
+    }, 7500);
+
+    // Khi click vào hình tròn, hiển thị lại nội dung
+    promoCircle.addEventListener('click', () => {
+        content.style.opacity = '1';
+        content.style.transform = 'translateY(0)';
+        
+        // Tự động ẩn sau vài giây (tuỳ bạn chỉnh)
+        setTimeout(() => {
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(20px)';
+        }, 5000);
     });
 });
 
