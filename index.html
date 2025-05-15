@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="CSS/trangchu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="JS/trangchu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 
 <body>
     <!-- Top bar -->
@@ -75,11 +75,11 @@
     </nav>
 
     <!-- Banner -->
-    <section class="banner">
-        <img src="images/banner_nhakhoa2.jpg" alt="Banner Nha Khoa Smile">
-        <div class="banner-text">
-            <h1>Chào mừng bạn đến với Nha Khoa Smile</h1>
-            <p>Đồng hành cùng bạn với các dịch vụ nha khoa chất lượng cao</p>
+     <section class="container">
+        <div class="banner reveal">
+            <img src="images/test.jpg" alt="Banner Nha Khoa Smile 1">
+            <img src="images/test.jpg" alt="Banner Nha Khoa Smile 2">
+            <img src="images/test.jpg" alt="Banner Nha Khoa Smile 3">
         </div>
     </section>
 
@@ -186,39 +186,64 @@
     </section>
 
     <!-- Doctors Section -->
-    <section class="doctors-section reveal">
-        <div class="container">
-            <h2 class="section-title">ĐỘI NGŨ BÁC SĨ</h2>
-            <div class="doctors-grid">
-                <div class="doctor-card">
-                    <img src="bacsi1.jpg" alt="Bác sĩ A">
-                    <h3>BS. Nguyễn Văn A</h3>
-                    <p>Chuyên gia Implant</p>
-                </div>
-                <div class="doctor-card">
-                    <img src="bacsi2.jpg" alt="Bác sĩ B">
-                    <h3>BS. Trần Thị B</h3>
-                    <p>Niềng răng - Chỉnh nha</p>
-                </div>
-                <div class="doctor-card">
-                    <img src="bacsi3.jpg" alt="Bác sĩ C">
-                    <h3>BS. Lê Văn C</h3>
-                    <p>Thẩm mỹ răng sứ</p>
-                </div>
-                <div class="doctor-card">
-                    <img src="bacsi4.jpg" alt="Bác sĩ D">
-                    <h3>BS. Phạm Thị D</h3>
-                    <p>Điều trị tủy</p>
-                </div>
+   <section class="doctors-section reveal">
+    <div class="container">
+        <h2 class="section-title">ĐỘI NGŨ BÁC SĨ</h2>
+        <div class="doctors-grid">
+            <div class="doctor-card" data-doctor="a">
+                <img src="images/bacsi1.jpg" alt="Bác sĩ A">
+                <h3>BS. Nguyễn Văn A</h3>
+                <p>Chuyên gia Implant</p>
+            </div>
+            <div class="doctor-card" data-doctor="b">
+                <img src="images/bacsi2.jpg" alt="Bác sĩ B">
+                <h3>BS. Trần Thị B</h3>
+                <p>Niềng răng - Chỉnh nha</p>
+            </div>
+            <div class="doctor-card" data-doctor="c">
+                <img src="images/bacsi3.jpg" alt="Bác sĩ C">
+                <h3>BS. Lê Văn C</h3>
+                <p>Thẩm mỹ răng sứ</p>
+            </div>
+            <div class="doctor-card" data-doctor="d">
+                <img src="images/bacsi4.jpg" alt="Bác sĩ D">
+                <h3>BS. Phạm Thị D</h3>
+                <p>Điều trị tủy</p>
+            </div>
+            <div class="doctor-card" data-doctor="e">
+                <img src="images/bacsi5.jpg" alt="Bác sĩ E">
+                <h3>BS. Hoàng Văn E</h3>
+                <p>Phục hình răng</p>
+            </div>
+            <div class="doctor-card" data-doctor="f">
+                <img src="images/bacsi6.jpg" alt="Bác sĩ F">
+                <h3>BS. Nguyễn Thị F</h3>
+                <p>Cấy ghép răng</p>
+            </div>
+            <div class="doctor-card" data-doctor="g">
+                <img src="images/bacsi7.jpg" alt="Bác sĩ G">
+                <h3>BS. Trần Văn G</h3>
+                <p>Chăm sóc răng trẻ em</p>
             </div>
         </div>
+        <!-- Modal để hiển thị thông tin bác sĩ -->
+        <div class="doctor-info" style="display: none;">
+            <div class="doctor-info-content">
+                <span class="close-btn">×</span>
+                <img src="" alt="Ảnh bác sĩ" class="info-avatar">
+                <h3 class="info-name"></h3>
+                <p class="info-specialty"></p>
+                <p class="info-bio"></p>
+            </div>
+        </div>
+    </div>
     </section>
 
     <section class="testimonial-section reveal">
         <h2 class="section-title">PHẢN HỒI KHÁCH HÀNG</h2>
         <div class="testimonial-slider">
             <div class="testimonial active">
-                <img src="images/avatar1.jpg" alt="Nguyễn Văn A" class="avatar">
+                <img src="images/avatar1.png" alt="Nguyễn Văn A" class="avatar">
                 <p class="feedback">"Tôi rất hài lòng với dịch vụ cấy ghép implant. Bác sĩ rất nhẹ nhàng và tận tâm!"</p>
                 <h4>Nguyễn Văn A</h4>
                 <div class="info">Dịch vụ: Trồng răng Implant • Tháng 1/2025</div>
