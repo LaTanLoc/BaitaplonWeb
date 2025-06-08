@@ -986,3 +986,112 @@ body {
   margin-bottom: 6px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .banner {
+    height: 250px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .appointment-form {
+    padding: 20px;
+  }
+}
+/* Mobile nav toggle */
+.mobile-nav-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-md);
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .appointment-form h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .dichvu-caption {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .news-card img,
+  .about-gallery img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 100%; /* Dưới thanh navbar */
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: var(--shadow-md);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+

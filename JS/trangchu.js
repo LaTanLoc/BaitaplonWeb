@@ -382,4 +382,10 @@ document.addEventListener("DOMContentLoaded", () => {
         chatBody.insertBefore(msg, chatInput); // thêm trước input
         chatBody.scrollTop = chatBody.scrollHeight;
     }
+
+    // Toggle Navigation Menu
+    $('#navToggle').on('click', function () {
+    $('#navMenu').toggleClass('active');
+    });
+
 });
