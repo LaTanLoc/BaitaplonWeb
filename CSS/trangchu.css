@@ -614,7 +614,7 @@ body {
 /* Back to Top Button */
 #back-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 45px;
   right: 20px;
   background-color: var(--main-color);
   color: #fff;
@@ -874,5 +874,115 @@ body {
   font-size: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   cursor: pointer;
+}
+
+.fake-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* ⚠️ Chỉnh lại sang bên trái */
+    background-color: #28a745;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 9999;
+    display: none;
+    animation: slideInLeft 0.5s ease-out, fadeOut 0.5s ease-in-out 5s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.chatbox {
+  position: fixed;
+  bottom: 0; /* SÁT MÉP DƯỚI */
+  right: 20px; /* hoặc 80px nếu cần tránh nút quay lên đầu */
+  width: 300px;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  z-index: 9999;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.chatbox-header {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.chatbox-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatbox-body {
+  background: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-message {
+  background-color: #e1f5fe;
+  padding: 8px 10px;
+  border-radius: 8px;
+  align-self: flex-start;
+  max-width: 90%;
+}
+
+.chat-input {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.chat-message.user {
+  background-color: #d2f8d2;
+  align-self: flex-end;
+  border-radius: 8px;
+  padding: 8px 8px;
+  margin-bottom: 6px;
+}
+
+.chat-message.bot {
+  background-color: #e1f5fe;
+  align-self: flex-start;
+  border-radius: 8px;
+  padding: 8px 8px;
+  margin-bottom: 6px;
 }
 

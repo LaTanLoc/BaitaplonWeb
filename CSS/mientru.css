@@ -1,0 +1,128 @@
+:root {
+  --main-color: #009dde;
+  --hover-color: #007bb6;
+  --light-bg: #eef8fd;
+  --dark-text: #333;
+  --sub-color: #0075c4;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+  --shadow-lg: 0 6px 12px rgba(0,0,0,0.08);
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--sub-color);
+  border-bottom: 2px solid #eee;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Accordion */
+.accordion-toggle {
+  position: relative;
+  cursor: pointer;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  padding: 16px 20px;
+  margin: 10px 0;
+  border-left: 5px solid var(--main-color);
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition);
+}
+
+.accordion-toggle::after {
+  content: "\f107"; /* Font Awesome chevron-down */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle.active {
+  background-color: #cbeeff;
+}
+
+.accordion-toggle.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background: #fefefe;
+  border-left: 3px solid var(--main-color);
+  border-radius: 0 0 6px 6px;
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+.accordion-content.open {
+  max-height: 500px;
+  padding: 12px 20px;
+  background: #f8fcff;
+}
+
+/* Utility classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.appointment-btn {
+  padding: 10px 20px;
+}

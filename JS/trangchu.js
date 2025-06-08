@@ -292,5 +292,94 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 5000);
     });
 });
+    // Hiển thị thông báo giả lập
+    const names = [
+        "Nguyễn Văn A", "Trần Thị B", "Lê Văn C", "Phạm Thị D", 
+        "Đỗ Minh E", "Vũ Thị F", "Hoàng Văn G", "Bùi Thị H"
+    ];
 
+    const services = [
+        "Niềng răng", "Bọc răng sứ", "Dán sứ Veneer", "Trồng răng Implant",
+        "Tẩy trắng răng", "Hàn/trám răng", "Nhổ răng", "Lấy cao răng",
+        "Tư vấn miễn phí"
+    ];
+
+    function getRandomElement(array) {
+        return array[Math.floor(Math.random() * array.length)];
+    }
+
+    function showFakeNotification() {
+        const name = getRandomElement(names);
+        const service = getRandomElement(services);
+        const message = `Khách hàng <strong>${name}</strong> vừa đặt lịch dịch vụ <strong>${service}</strong>!`;
+
+        const notification = document.getElementById('fake-notification');
+        const messageContainer = document.getElementById('fake-message');
+
+        messageContainer.innerHTML = message;
+        notification.style.display = 'block';
+
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 6000);
+    }
+
+    // Hiển thị lần đầu sau 3s
+    setTimeout(showFakeNotification, 3000);
+
+    // Lặp lại mỗi 20s
+    setInterval(showFakeNotification, 20000);
+
+    // Chatbox Functionality
+    const chatToggleBtn = document.querySelector('.chatbox-toggle');
+    const chatBody = document.querySelector('.chatbox-body');
+    const chatInput = document.querySelector('.chat-input');
+
+    const responses = {
+        "chào": "Chào bạn! Nha Khoa Smile rất hân hạnh được hỗ trợ.",
+        "giá": "Bạn muốn hỏi giá dịch vụ nào ạ? Bạn có thể xem bảng giá trong menu.",
+        "implant": "Dịch vụ cấy ghép Implant hiện đang được ưu đãi tới 20%.",
+        "niềng": "Niềng răng tại phòng khám được thực hiện bởi bác sĩ chuyên sâu.",
+        "cảm ơn": "Rất vui được hỗ trợ bạn!"
+    };
+
+    // Ẩn chat body ban đầu
+    chatBody.style.display = 'none';
+    chatToggleBtn.textContent = '+';
+
+    // Toggle chat body khi click
+    chatToggleBtn.addEventListener('click', () => {
+        const isVisible = chatBody.style.display === 'block';
+        chatBody.style.display = isVisible ? 'none' : 'block';
+        chatToggleBtn.textContent = isVisible ? '+' : '−';
+    });
+
+    // Chat trả lời đơn giản
+    chatInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter' && chatInput.value.trim() !== '') {
+        const message = chatInput.value.trim();
+        addMessage(message, 'user');
+
+        const lower = message.toLowerCase();
+        let reply = "Xin lỗi, mình chưa hiểu ý bạn. Bạn có thể hỏi về dịch vụ, giá, đặt lịch,...";
+
+        for (let keyword in responses) {
+            if (lower.includes(keyword)) {
+            reply = responses[keyword];
+            break;
+            }
+        }
+
+        setTimeout(() => addMessage(reply, 'bot'), 500);
+        chatInput.value = '';
+        }
+    });
+
+    function addMessage(text, sender = 'user') {
+        const msg = document.createElement('div');
+        msg.className = 'chat-message ' + sender;
+        msg.textContent = text;
+        chatBody.insertBefore(msg, chatInput); // thêm trước input
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
 });

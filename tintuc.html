@@ -4,27 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/icon.png">
-    <title>Nha Khoa Smile - Hỏi Đáp</title>
+    <title>5 Lưu Ý Sau Khi Cấy Ghép Implant | Nha Khoa Smile</title>
     <link rel="stylesheet" href="CSS/trangchu.css">
-    <link rel="stylesheet" href="CSS/hoidap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="JS/trangchu.js"></script>
-    <script src="JS/hoidap.js"></script>
+    <script src="JS/trangchu.js" defer></script>
 </head>
-
 <body>
-    <!-- Spinner -->
-    <div id="spinner" class="show">
-        <div class="three-dots">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
 
-    <!-- Top bar -->
+    <!-- Top Bar -->
     <div class="top-bar">
-        <div class="container flex-between">
+        <div class="container flex-center">
             <div class="left">
                 <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
                 <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
@@ -50,7 +39,7 @@
                 <div class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></div>
                 <div class="nav-item"><a href="gioithieu.html" class="nav-link">Giới thiệu</a></div>
                 <div class="nav-item dropdown">
-                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
                     <div class="dropdown-content">
                         <a href="dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
                         <a href="dichvuthammy/niengrang.html">Niềng răng</a>
@@ -58,9 +47,8 @@
                         <a href="dichvuthammy/trongrang.html">Trồng răng Implant</a>
                     </div>
                 </div>
-                
                 <div class="nav-item dropdown">
-                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
                     <div class="dropdown-content">
                         <a href="dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
                         <a href="dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
@@ -69,13 +57,6 @@
                     </div>
                 </div>
                 <div class="nav-item"><a href="hoidap.html" class="nav-link">Hỏi đáp</a></div>
-                <div class="nav-item dropdown">
-                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
-                    <div class="dropdown-content">
-                        <a href="bangia_thammy.html">Dịch vụ thẩm mỹ</a>
-                        <a href="bangia_nhakhoa.html">Dịch vụ nha khoa</a>
-                    </div>
-                </div>
                 <div class="nav-item">
                     <a href="datlich.html" class="nav-link">
                         <button class="btn appointment-btn">Đặt lịch</button>
@@ -84,15 +65,14 @@
             </div>
         </div>
     </nav>
-
     <!-- Banner -->
-      <section class="container">
-        <div class="banner">
-            <img src="images/Banner 1.jpg" alt="Banner Nha Khoa Smile 1">
-            <img src="images/Banner 2.jpg" alt="Banner Nha Khoa Smile 2">
-            <img src="images/Banner 3.jpg" alt="Banner Nha Khoa Smile 3">
-        </div>
-    </section>
+        <section class="container">
+            <div class="banner">
+                <img src="images/Banner 1.jpg" alt="Banner Nha Khoa Smile 1">
+                <img src="images/Banner 2.jpg" alt="Banner Nha Khoa Smile 2">
+                <img src="images/Banner 3.jpg" alt="Banner Nha Khoa Smile 3">
+            </div>
+        </section>
 
     <!-- Appointment Form -->
     <section class="appointment-form container">
@@ -147,34 +127,42 @@
             </div>
         </form>
     </section>
+    
+    <!-- Nội dung bài viết -->
+    <section class="container reveal" style="padding: 60px 20px; max-width: 900px;">
+        <h1 class="section-title">5 Lưu Ý Sau Khi Cấy Ghép Implant</h1>
+        <p style="color: #777; font-size: 14px; margin-bottom: 20px;">
+            <i class="fa-regular fa-calendar"></i> Ngày đăng: 10/04/2025 &nbsp; | &nbsp;
+            <i class="fa-regular fa-user"></i> Bởi Nha Khoa Smile
+        </p>
 
-    <!-- Q&A Section -->
-    <section class="qna-section container reveal">
-        <!-- Question Form -->
-        <div class="qna-form reveal">
-            <h3>Gửi Câu Hỏi</h3>
-            <form id="qna-form">
-                <div class="form-group">
-                    <label for="qna-name">Họ và Tên</label>
-                    <input type="text" id="qna-name" name="name" placeholder="Nhập họ và tên" required>
-                </div>
-                <div class="form-group">
-                    <label for="qna-question">Câu Hỏi</label>
-                    <input type="text" id="qna-question" name="question" placeholder="Nhập câu hỏi của bạn" required>
-                </div>
-                <div class="form-group submit">
-                    <button type="submit" class="btn submit-btn">Gửi Câu Hỏi</button>
-                </div>
-            </form>
-        </div>
+        <img src="images/Tin tức 1.jpg" alt="Cấy ghép Implant" style="width: 100%; border-radius: 10px; margin-bottom: 30px; box-shadow: var(--shadow-md);">
 
-        <!-- Questions and Answers Display -->
-        <div class="qna-list reveal" id="qna-list">
-            <h3>Các Câu Hỏi và Trả Lời</h3>
-            <button id="clear-data-btn" class="btn clear-btn">Xóa Dữ Liệu</button>
-            <!-- Questions and answers will be dynamically loaded via JS -->
-            <div id="pagination" class="pagination"></div>
-        </div>
+        <p style="line-height: 1.8;">
+            Cấy ghép Implant là phương pháp phục hồi răng mất tối ưu, mang lại tính thẩm mỹ và khả năng ăn nhai vượt trội. Tuy nhiên, để đạt kết quả tối đa, bạn cần lưu ý những điều quan trọng sau khi thực hiện thủ thuật này.
+        </p>
+
+        <h2>1. Tránh tác động mạnh vào vùng cấy ghép</h2>
+        <p>Trong vài ngày đầu, tránh nhai bên phía vừa cấy Implant. Không dùng tay, lưỡi chạm vào vùng đó để tránh làm trụ bị lỏng hoặc nhiễm trùng.</p>
+
+        <h2>2. Ăn uống hợp lý</h2>
+        <img src="images/implant.png" alt="Ăn uống sau Implant" style="width:100%; border-radius:8px; margin:15px 0;">
+        <p>Ưu tiên thức ăn mềm, nguội, dễ tiêu hóa như cháo, súp, sữa, nước ép… Tránh thức ăn cứng, dai, nóng hoặc cay trong 5–7 ngày đầu.</p>
+
+        <h2>3. Vệ sinh răng miệng nhẹ nhàng</h2>
+        <p>Sử dụng bàn chải lông mềm, chỉ nha khoa hoặc tăm nước để vệ sinh. Tránh chải trực tiếp lên trụ Implant. Có thể dùng nước muối sinh lý để súc miệng nhẹ nhàng.</p>
+
+        <h2>4. Không hút thuốc và dùng chất kích thích</h2>
+        <p>Thuốc lá, rượu bia làm chậm quá trình lành thương, tăng nguy cơ đào thải Implant. Bạn nên kiêng hoàn toàn trong ít nhất 2 tuần đầu.</p>
+
+        <h2>5. Tái khám theo lịch hẹn của bác sĩ</h2>
+        <p>Việc theo dõi định kỳ giúp kiểm tra trụ có tích hợp tốt với xương hay không. Nếu thấy dấu hiệu bất thường như sưng, đau kéo dài, chảy máu, cần đến gặp bác sĩ ngay.</p>
+
+        <blockquote style="margin: 30px 0; padding: 20px; background-color: #f0f8ff; border-left: 4px solid var(--main-color);">
+            💡 <strong>Lưu ý:</strong> Chăm sóc đúng cách sau cấy ghép Implant giúp duy trì răng bền chắc hàng chục năm. Hãy nghiêm túc tuân thủ hướng dẫn của bác sĩ.
+        </blockquote>
+
+        <p><strong>Nha Khoa Smile</strong> tự hào đồng hành cùng bạn trong hành trình phục hồi nụ cười rạng rỡ!</p>
     </section>
 
     <!-- Footer -->
@@ -197,18 +185,18 @@
                 <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
             </div>
             <div class="footer-box">
-                <h3>Nha Khoa Smile</h3>
+                <h3>Liên kết nhanh</h3>
                 <a href="gioithieu.html">Giới thiệu</a>
                 <a href="mientrutrachnhiem.html">Miễn trừ trách nhiệm</a>
-                <a href="#">Chính sách bảo hành</a>
-                <a href="#">Chính sách bảo mật & quyền riêng tư</a>
+                <a href="chinhsachbaohanh.html">Chính sách bảo hành</a>
+                <a href="#">Chính sách bảo mật</a>
             </div>
             <div class="footer-box social">
                 <h3>Kết Nối Với Chúng Tôi</h3>
-                <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -217,8 +205,16 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
+    <!-- Back to Top -->
     <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
-  
+
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 </body>
 </html>
