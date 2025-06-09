@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <title>Nha Khoa Smile - Giới Thiệu</title>
+    <link rel="stylesheet" href="CSS/trangchu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="JS/trangchu.js"></script>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Top bar -->
+    <div class="top-bar">
+        <div class="container flex-between">
+            <div class="left">
+                <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
+                <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
+            </div>
+            <div class="right">
+                <span><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> 0909 987 654</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container flex-between">
+            <div class="logo flex-center">
+                <i class="fa-solid fa-tooth"></i>
+                <div class="logo-text">
+                    <div class="main-title">Nha Khoa Smile</div>
+                    <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                </div>
+            </div>
+            <button class="mobile-nav-toggle" id="navToggle">&#9776;</button>
+            <div class="nav-menu flex-center">
+                <div class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></div>
+                <div class="nav-item"><a href="gioithieu.html" class="nav-link">Giới thiệu</a></div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <div class="dropdown-content">
+                        <a href="dichvuthammy/bocrangsu.html">Bọc răng sứ</a>
+                        <a href="dichvuthammy/niengrang.html">Niềng răng</a>
+                        <a href="dichvuthammy/dansuvenner.html">Dán sứ Veneer</a>
+                        <a href="dichvuthammy/trongrang.html">Trồng răng Implant</a>
+                    </div>
+                </div>
+                
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <div class="dropdown-content">
+                        <a href="dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
+                        <a href="dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
+                        <a href="dichvunhakhoa/taytrang.html">Tẩy trắng/lấy cao răng</a>
+                        <a href="dichvunhakhoa/nhorang.html">Nhổ răng</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="hoidap.html" class="nav-link">Hỏi đáp</a></div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <div class="dropdown-content">
+                        <a href="bangia_thammy.html">Dịch vụ thẩm mỹ</a>
+                        <a href="bangia_nhakhoa.html">Dịch vụ nha khoa</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="datlich.html" class="nav-link">
+                        <button class="btn appointment-btn">Đặt lịch</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Banner -->
+    <section class="container">
+        <div class="banner">
+            <img src="images/Banner 1.jpg" alt="Banner Nha Khoa Smile 1">
+            <img src="images/Banner 2.jpg" alt="Banner Nha Khoa Smile 2">
+            <img src="images/Banner 3.jpg" alt="Banner Nha Khoa Smile 3">
+        </div>
+    </section>
+    <!-- Appointment Form -->
+    <section class="appointment-form container">
+        <h2>Đặt Lịch Hẹn</h2>
+        <form id="appointment-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Ngày Hẹn</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Giờ hẹn</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Dịch Vụ</label>
+                <select id="service" name="service" required>
+                    <option value="">Chọn dịch vụ</option>
+                    <optgroup label="Dịch vụ thẩm mỹ">
+                        <option value="boc-rang-su">Bọc răng sứ</option>
+                        <option value="nieng-rang">Niềng răng</option>
+                        <option value="dan-su-veneer">Dán sứ Veneer</option>
+                        <option value="trong-rang-su">Trồng răng Implant</option>
+                    </optgroup>
+                    <optgroup label="Dịch vụ nha khoa">
+                        <option value="han-tram-rang">Hàn/trám răng</option>
+                        <option value="tay-trang">Tẩy trắng răng</option>
+                        <option value="nha-chu">Điều trị nha chu</option>
+                        <option value="nho-rang">Nhổ răng</option>
+                        <option value="lay-cao-rang">Lấy cao răng</option>
+                    </optgroup>
+                    <optgroup label="Khác">
+                        <option value="tuvan">Tư vấn miễn phí</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-group submit">
+                <button type="submit" class="btn submit-btn">Gửi</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="about-section container">
+        <h2 class="section-title reveal">VỀ CHÚNG TÔI</h2>
+        <div class="about-content reveal">
+            <p>
+            Thành lập vào ngày 15/12/2023, Nha Khoa Smile tự hào là một trong những trung tâm nha khoa thẩm mỹ hàng đầu tại Việt Nam.
+            Với sứ mệnh “Nụ cười hoàn hảo cho bạn”, chúng tôi không ngừng nỗ lực mang đến những dịch vụ nha khoa chất lượng cao,
+            giúp khách hàng sở hữu hàm răng khỏe đẹp, bền vững và tự tin với nụ cười của mình.
+            </p>
+        </div>
+
+        <!-- Giá trị cốt lõi và cam kết -->
+        <h2 class="section-title reveal">GIÁ TRỊ CỐT LÕI & CAM KẾT</h2>
+        <div class="about-content reveal">
+            <p>
+            Tại Nha Khoa Smile, chúng tôi cam kết mang đến cho khách hàng những dịch vụ nha khoa chất lượng cao nhất,
+            với đội ngũ bác sĩ và chuyên gia hàng đầu trong ngành, cùng hệ thống trang thiết bị hiện đại và công nghệ tiên tiến.
+            </p>
+            <p>
+            Chúng tôi luôn lắng nghe và thấu hiểu nhu cầu của khách hàng, từ đó đưa ra những giải pháp điều trị phù hợp nhất,
+            giúp khách hàng đạt được kết quả tốt nhất trong thời gian ngắn nhất.
+            </p>
+            <p>
+            Chúng tôi cam kết mang đến cho khách hàng những dịch vụ nha khoa chất lượng cao nhất, với đội ngũ bác sĩ và chuyên gia hàng đầu trong ngành,
+            cùng hệ thống trang thiết bị hiện đại và công nghệ tiên tiến.
+            </p>
+        </div>
+
+        <h2 class="section-title reveal">ĐỘI NGŨ BÁC SĨ</h2>
+        <div class="about-content reveal">
+            <p>
+            Sở hữu đội ngũ y bác sĩ giàu kinh nghiệm, với nhiều năm hoạt động trong lĩnh vực nha khoa. 
+            Các bác sĩ của chúng tôi không chỉ thực hiện thành công hàng chục nghìn ca điều trị và thẩm mỹ nha khoa phức tạp mà còn đảm nhận vai trò đào tạo cho nhiều thế hệ nha sĩ tương lai.
+            </p>
+            <div class="doc-team reveal">
+                <img src="images/Đội ngũ bác sĩ.jpg" alt="Đội ngũ bác sĩ" class="w-1/2 rounded-lg shadow-md">
+            </div>
+        </div>
+
+        <h2 class="section-title reveal">THÀNH TỰU NỔI BẬT</h2>
+        <div class="about-content reveal">
+            <p>
+            Mặc dù mới thành lập nhưng Nha Khoa Smile đã nhanh chóng khẳng định được vị thế của mình trong ngành nha khoa tại Việt Nam.
+            Chúng tôi đã đạt được nhiều giải thưởng và chứng nhận từ các tổ chức uy tín trong và ngoài nước, nhờ vào những nỗ lực không ngừng nghỉ trong việc nâng cao chất lượng dịch vụ và chăm sóc khách hàng.
+            </p>
+        </div>
+    </section>
+
+    <!-- Dịch vụ nha khoa -->
+    <section class="about-section container">
+        <h2 class="section-title reveal">CÁC DỊCH VỤ NHA KHOA</h2>
+        <div class="dichvu-grid reveal">
+            <div class="dichvu-item reveal">
+                <img src="images/Bọc răng sứ.webp" alt="Bọc răng sứ">
+                <div class="dichvu-caption">BỌC RĂNG SỨ</div>
+            </div>
+            <div class="dichvu-item reveal">
+                <img src="images/Niềng răng thẩm mỹ.jpg" alt="Niềng răng thẩm mỹ">
+                <div class="dichvu-caption">NIỀNG RĂNG THẨM MỸ</div>
+            </div>
+            <div class="dichvu-item reveal">
+                <img src="images/Dán sứ veneer.jpg" alt="Dán sứ veneer">
+                <div class="dichvu-caption">DÁN SỨ VENEER</div>
+            </div>
+            <div class="dichvu-item reveal">
+                <img src="images/Trồng răng.png" alt="Trồng răng ">
+                <div class="dichvu-caption">TRỒNG RĂNG IMPLANT</div>
+            </div>
+            <div class="dichvu-item reveal">
+                <img src="images/Hàn trám răng 1.png" alt="Hàn/trám răng">
+                <div class="dichvu-caption">HÀN/TRÁM RĂNG</div>
+            </div>
+            <div class="dichvu-item reveal">
+                <img src="images/Điều trị nha chu.webp" alt="Điều trị nha chu">
+                <div class="dichvu-caption">ĐIỀU TRỊ NHA CHU</div>
+            </div>
+            <div class="dichvu-item reveal">
+                <img src="images/taytrangrang.jpg" alt="Tẩy trắng răng">
+                <div class="dichvu-caption">TẨY TRẮNG/LẤY CAO RĂNG</div>
+            </div>
+            <div class="dichvu-item reveal">
+                <img src="images/nhorang.jpg" alt="Nhổ răng">
+                <div class="dichvu-caption">NHỔ RĂNG</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <div class="logo flex-center">
+                    <i class="fa-solid fa-tooth"></i>
+                    <div class="logo-text">
+                        <div class="main-title">Nha Khoa Smile</div>
+                        <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-box">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
+                <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
+                <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
+            </div>
+        
+            <div class="footer-box">
+                <h3>Nha Khoa Smile</h3>
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="mientrutrachnhiem.html">Miễn trừ trách nhiệm</a>
+                <a href="#">Chính sách bảo hành</a>
+                <a href="#">Chính sách bảo mật & quyền riêng tư</a>
+            </div>
+          
+            <div class="footer-box social">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Nha Khoa Smile. All Rights Reserved.</p>
+            <p>Thiết kế bởi Nhóm 13</p>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+</body>
+</html>
