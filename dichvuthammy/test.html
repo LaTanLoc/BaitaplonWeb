@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <title>Nha Khoa Smile - Bọc răng sứ</title>
+    <link rel="stylesheet" href="../CSS/trangchu.css">
+    <link rel="stylesheet" href="../CSS/noidung.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../JS/trangchu.js"></script>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show">
+        <div class="three-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Top bar -->
+    <div class="top-bar">
+        <div class="container flex-between">
+            <div class="left">
+                <div><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</div>
+                <div><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</div>
+            </div>
+            <div class="right">
+                <span><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> 0909 987 654</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container flex-between">
+            <div class="logo flex-center">
+                <i class="fa-solid fa-tooth"></i>
+                <div class="logo-text">
+                    <div class="main-title">Nha Khoa Smile</div>
+                    <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                </div>
+            </div>
+            <button class="mobile-nav-toggle" id="navToggle">&#9776;</button>
+            <div class="nav-menu flex-center">
+                <div class="nav-item"><a href="../index.html" class="nav-link">Trang chủ</a></div>
+                <div class="nav-item"><a href="../gioithieu.html" class="nav-link">Giới thiệu</a></div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ thẩm mỹ</a>
+                    <div class="dropdown-content">
+                        <a href="bocrangsu.html">Bọc răng sứ</a>
+                        <a href="niengrang.html">Niềng răng</a>
+                        <a href="dansuvenner.html">Dán sứ Veneer</a>
+                        <a href="trongrang.html">Trồng răng Implant</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Dịch vụ nha khoa</a>
+                    <div class="dropdown-content">
+                        <a href="../dichvunhakhoa/hamtram.html">Hàn/trám răng</a>
+                        <a href="../dichvunhakhoa/dieutrinhauchu.html">Điều trị nha chu</a>
+                        <a href="../dichvunhakhoa/taytrang.html">Tẩy trắng/lấy cao răng</a>
+                        <a href="../dichvunhakhoa/nhorang.html">Nhổ răng</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="../hoidap.html" class="nav-link">Hỏi đáp</a></div>
+                <div class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Bảng giá</a>
+                    <div class="dropdown-content">
+                        <a href="../bangia_thammy.html">Dịch vụ thẩm mỹ</a>
+                        <a href="../bangia_nhakhoa.html">Dịch vụ nha khoa</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../datlich.html" class="nav-link">
+                        <button class="btn appointment-btn">Đặt lịch</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+  <section class="container">
+        <div class="banner">
+             <img src="../images/Banner 1.jpg" alt="Banner Nha Khoa Smile 1">
+            <img src="../images/Banner 2.jpg" alt="Banner Nha Khoa Smile 2">
+            <img src="../images/Banner 3.jpg" alt="Banner Nha Khoa Smile 3">
+        </div>
+    </section>
+
+    <!-- Appointment Form -->
+    <section class="appointment-form container ">
+        <h2>Đặt Lịch Hẹn</h2>
+        <form id="appointment-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Ngày Hẹn</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Giờ hẹn</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Dịch Vụ</label>
+                <select id="service" name="service" required>
+                    <option value="">Chọn dịch vụ</option>
+                    <optgroup label="Dịch vụ thẩm mỹ">
+                        <option value="boc-rang-su">Bọc răng sứ</option>
+                        <option value="nieng-rang">Niềng răng</option>
+                        <option value="dan-su-veneer">Dán sứ Veneer</option>
+                        <option value="trong-rang-su">Trồng răng Implant</option>
+                    </optgroup>
+                    <optgroup label="Dịch vụ nha khoa">
+                        <option value="han-tram-rang">Hàn/trám răng</option>
+                        <option value="tay-trang">Tẩy trắng răng</option>
+                        <option value="nha-chu">Điều trị nha chu</option>
+                        <option value="nho-rang">Nhổ răng</option>
+                        <option value="lay-cao-rang">Lấy cao răng</option>
+                    </optgroup>
+                    <optgroup label="Khác">
+                        <option value="tuvan">Tư vấn miễn phí</option>
+                    </optgroup>
+                </select>                       
+            </div>
+            <div class="form-group submit">
+                <button type="submit" class="btn submit-btn">Gửi</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Nội dung -->
+    <section class="service-header container reveal">
+        <h1>Bọc Răng Sứ</h1>
+        <p>Giải pháp phục hình thẩm mỹ hoàn hảo, mang lại nụ cười tự tin với hàm răng trắng sáng, đều đẹp.</p>
+    </section>
+
+    <section class="service-content container reveal">
+        <div class="service-info reveal">
+            <h3>Giới Thiệu Về Bọc Răng Sứ</h3>
+            <p>Bọc răng sứ là kỹ thuật phục hình răng thẩm mỹ bằng cách mài nhỏ răng thật và chụp lên một lớp mão sứ được chế tác riêng biệt. Phương pháp này giúp cải thiện màu sắc, hình dáng và chức năng của răng một cách tối ưu.</p>
+            <ul>
+                <li><strong>Thẩm mỹ cao:</strong> Màu sắc trắng sáng tự nhiên, cải thiện rõ rệt hình thể răng.</li>
+                <li><strong>Khắc phục răng xấu:</strong> Áp dụng cho răng xỉn màu, răng thưa, răng bị mẻ hoặc mòn men.</li>
+                <li><strong>Bền vững:</strong> Tuổi thọ mão sứ từ 10–20 năm, nếu chăm sóc tốt có thể dùng lâu hơn.</li>
+                <li><strong>An toàn:</strong> Vật liệu sứ sinh học, không gây kích ứng nướu hay ảnh hưởng đến sức khỏe.</li>
+            </ul>
+
+            <h3>Quy Trình Bọc Răng Sứ</h3>
+            <ol>
+                <li><strong>Lần hẹn 1 – Khám và tư vấn:</strong>
+                    <ul>
+                        <li>Kiểm tra tình trạng răng miệng tổng quát.</li>
+                        <li>Tư vấn phương án bọc sứ phù hợp với hình dáng và màu răng.</li>
+                    </ul>
+                </li>
+                <li><strong>Lần hẹn 2 – Mài răng và lấy dấu:</strong>
+                    <ul>
+                        <li>Vệ sinh răng, gây tê và mài răng nhẹ nhàng.</li>
+                        <li>Lấy dấu răng gửi về labo để chế tác mão sứ.</li>
+                        <li>Lắp răng tạm để đảm bảo thẩm mỹ và chức năng tạm thời.</li>
+                    </ul>
+                </li>
+                <li><strong>Lần hẹn 3 – Gắn răng sứ:</strong>
+                    <ul>
+                        <li>Gắn thử mão sứ và điều chỉnh.</li>
+                        <li>Gắn cố định bằng keo chuyên dụng, kiểm tra khớp cắn và màu sắc.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Các Loại Răng Sứ</h3>
+            <ul>
+                <li><strong>Sứ toàn sứ (Cercon, Lava, Emax...):</strong> Tính thẩm mỹ cao, không đen viền nướu, độ bền tốt.</li>
+                <li><strong>Sứ kim loại (Titan, Cr-Co...):</strong> Chi phí thấp hơn, độ bền cao, nhưng có thể đen viền sau thời gian dài.</li>
+                <li><strong>Sứ Zirconia:</strong> Cứng chắc, thẩm mỹ gần giống răng thật, phổ biến nhất hiện nay.</li>
+            </ul>
+
+            <h3>Cam Kết & Bảo Hành</h3>
+            <ul>
+                <li><strong>Thẩm mỹ chuẩn:</strong> Màu sắc và hình dáng răng tự nhiên.</li>
+                <li><strong>Không đau:</strong> Quy trình nhẹ nhàng, an toàn.</li>
+                <li><strong>Trang thiết bị hiện đại:</strong> Thiết kế mão sứ CAD/CAM.</li>
+                <li><strong>Bảo hành:</strong> Từ 3–10 năm, tùy loại sứ.</li>
+            </ul>
+        </div>
+
+        <div class="service-image reveal">
+            <img src="../images/bocrangsu1.jpg" alt="Bọc Răng Sứ 1">
+            <img src="../images/bocrangsu2.jpg" alt="Bọc Răng Sứ 2">
+            <img src="../images/bocrangsu3.jpg" alt="Bọc Răng Sứ 3">
+
+            <div class="testimonial-slider reveal">
+                <div class="testimonial active">
+                    <p class="feedback">"Răng sứ trắng đẹp tự nhiên, mình cảm thấy tự tin hơn rất nhiều khi cười!"</p>
+                    <p class="customer-info">– Chị Linh, tháng 1/2025</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Bác sĩ tư vấn kỹ, làm nhẹ nhàng, mình hoàn toàn hài lòng với kết quả."</p>
+                    <p class="customer-info">– Anh Dũng, tháng 12/2024</p>
+                </div>
+                <div class="testimonial">
+                    <p class="feedback">"Chỉ sau vài ngày là có nụ cười rạng rỡ như ý!"</p>
+                    <p class="customer-info">– Cô Hạnh, tháng 11/2024</p>
+                </div>
+            </div>
+
+            <section class="service-summary container reveal">
+                <div class="summary-content">
+                    <h3>Tóm Tắt Dịch Vụ</h3>
+                    <ul>
+                        <li><strong>Tên dịch vụ:</strong> Bọc Răng Sứ</li>
+                        <li><strong>Mô tả:</strong> Mài răng và bọc mão sứ thẩm mỹ, phục hồi chức năng.</li>
+                        <li><strong>Chỉ định:</strong> Răng thưa, lệch nhẹ, xỉn màu, sứt mẻ, mòn men, đã điều trị tủy.</li>
+                        <li><strong>Chống chỉ định:</strong> Viêm nha chu, răng lung lay nặng.</li>
+                        <li><strong>Thời gian:</strong> 2–3 lần hẹn, mỗi lần 30–60 phút</li>
+                        <li><strong>Chi phí:</strong> 1,500,000 – 4,000,000 VNĐ/răng</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <div class="logo flex-center">
+                    <i class="fa-solid fa-tooth"></i>
+                    <div class="logo-text">
+                        <div class="main-title">Nha Khoa Smile</div>
+                        <div class="subtitle">Nụ cười hoàn hảo cho bạn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fa-regular fa-clock"></i> Thứ 2 - Thứ 7: 7h00 - 18h00</p>
+                <p><i class="fa-solid fa-location-dot"></i> 12 Chùa Bộc, Quang Trung, Đống Đa</p>
+                <p><i class="fa-regular fa-envelope"></i> nhakhoasmile@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0909 987 654</p>
+            </div>
+            <div class="footer-box">
+                <h3>Nha Khoa Smile</h3>
+                <a href="../gioithieu.html">Giới thiệu</a>
+                <a href="../mientrutrachnhiem.html">Miễn trừ trách nhiệm</a>
+                <a href="../chinhsachbaohanh.html">Chính sách bảo hành</a>
+                <a href="#">Chính sách bảo mật & quyền riêng tư</a>
+            </div>
+            <div class="footer-box social">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Nha Khoa Smile. All Rights Reserved.</p>
+            <p>Thiết kế bởi Nhóm 13</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+</body>
+</html>
