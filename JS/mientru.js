@@ -16,12 +16,3 @@ document.addEventListener("DOMContentLoaded", () => {
           otherContent.classList.remove("open");
         }
       });
-
-      // Mở lại nếu chưa mở
-      if (!isOpen) {
-        toggle.classList.add("active");
-        content.classList.add("open");
-      }
-    });
-  });
-});
