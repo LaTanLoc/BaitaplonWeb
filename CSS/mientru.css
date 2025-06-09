@@ -107,22 +107,4 @@ body {
   align-items: center;
 }
 
-/* Buttons */
-.btn {
-  background-color: var(--main-color);
-  color: #fff;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background var(--transition);
-}
 
-.btn:hover {
-  background-color: var(--hover-color);
-}
-
-.appointment-btn {
-  padding: 10px 20px;
-}
