@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (otherContent && otherContent.classList.contains("accordion-content")) {
           otherContent.classList.remove("open");
         }
-      });
-
+      });  
       // Mở lại nếu chưa mở
       if (!isOpen) {
         toggle.classList.add("active");
